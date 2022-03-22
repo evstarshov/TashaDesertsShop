@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
-		3ADFBCC027E9BF7000BBB8A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBF27E9BF7000BBB8A3 /* ViewController.swift */; };
-		3ADFBCC327E9BF7000BBB8A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC127E9BF7000BBB8A3 /* Main.storyboard */; };
 		3ADFBCC527E9BF7500BBB8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
 		3ADFBCD327E9BF7500BBB8A3 /* TashaDesertsShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCD227E9BF7500BBB8A3 /* TashaDesertsShopTests.swift */; };
@@ -39,8 +37,6 @@
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3ADFBCBF27E9BF7000BBB8A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3ADFBCC227E9BF7000BBB8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADFBCC727E9BF7500BBB8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ADFBCC927E9BF7500BBB8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		3ADFBCBA27E9BF7000BBB8A3 /* TashaDesertsShop */ = {
 			isa = PBXGroup;
 			children = (
-				3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */,
-				3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */,
-				3ADFBCBF27E9BF7000BBB8A3 /* ViewController.swift */,
-				3ADFBCC127E9BF7000BBB8A3 /* Main.storyboard */,
-				3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */,
-				3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */,
-				3ADFBCC927E9BF7500BBB8A3 /* Info.plist */,
+				3ADFBCEB27E9C44900BBB8A3 /* App */,
+				3ADFBCEC27E9C46100BBB8A3 /* Core */,
+				3ADFBCED27E9C46C00BBB8A3 /* Resourses */,
+				3ADFBCEE27E9C47500BBB8A3 /* Enviroments */,
 			);
 			path = TashaDesertsShop;
 			sourceTree = "<group>";
@@ -125,6 +118,71 @@
 				3ADFBCDE27E9BF7500BBB8A3 /* TashaDesertsShopUITestsLaunchTests.swift */,
 			);
 			path = TashaDesertsShopUITests;
+			sourceTree = "<group>";
+		};
+		3ADFBCEB27E9C44900BBB8A3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */,
+				3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */,
+				3ADFBCF227E9C4DF00BBB8A3 /* Flows */,
+				3ADFBCF127E9C4CC00BBB8A3 /* Assembly */,
+				3ADFBCF027E9C4BD00BBB8A3 /* Entity */,
+				3ADFBCEF27E9C4AA00BBB8A3 /* BusinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3ADFBCEC27E9C46100BBB8A3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3ADFBCED27E9C46C00BBB8A3 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */,
+				3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		3ADFBCEE27E9C47500BBB8A3 /* Enviroments */ = {
+			isa = PBXGroup;
+			children = (
+				3ADFBCC927E9BF7500BBB8A3 /* Info.plist */,
+			);
+			path = Enviroments;
+			sourceTree = "<group>";
+		};
+		3ADFBCEF27E9C4AA00BBB8A3 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		3ADFBCF027E9C4BD00BBB8A3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3ADFBCF127E9C4CC00BBB8A3 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		3ADFBCF227E9C4DF00BBB8A3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +291,6 @@
 			files = (
 				3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */,
 				3ADFBCC527E9BF7500BBB8A3 /* Assets.xcassets in Resources */,
-				3ADFBCC327E9BF7000BBB8A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ADFBCC027E9BF7000BBB8A3 /* ViewController.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
 				3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3ADFBCC127E9BF7000BBB8A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3ADFBCC227E9BF7000BBB8A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
