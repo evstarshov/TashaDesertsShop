@@ -14,12 +14,14 @@ struct User: Codable {
     let login: String
     let name: String
     let lastname: String
+    let password: String
     
     enum CodingKeys: String, CodingKey {
         case id = "id_user"
         case login = "user_login"
         case name = "user_name"
         case lastname = "user_lastname"
+        case password
         
     }
 }
