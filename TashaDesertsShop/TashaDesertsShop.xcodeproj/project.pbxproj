@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
-		3ADFBCC527E9BF7500BBB8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
 		3ADFBCD327E9BF7500BBB8A3 /* TashaDesertsShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCD227E9BF7500BBB8A3 /* TashaDesertsShopTests.swift */; };
 		3ADFBCDD27E9BF7500BBB8A3 /* TashaDesertsShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCDC27E9BF7500BBB8A3 /* TashaDesertsShopUITests.swift */; };
@@ -23,6 +22,9 @@
 		3AFF712027F0600800C5399B /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF711F27F0600800C5399B /* LoginResult.swift */; };
 		3AFF712227F0603400C5399B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712127F0603400C5399B /* User.swift */; };
 		3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712427F0617500C5399B /* AuthRequestFactory.swift */; };
+		3AFF712727F0625C00C5399B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712627F0625C00C5399B /* Auth.swift */; };
+		3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712827F0665400C5399B /* RequestFactory.swift */; };
+		3AFF712B27F069E300C5399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF712A27F069E300C5399B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,6 @@
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ADFBCC727E9BF7500BBB8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ADFBCC927E9BF7500BBB8A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ADFBCCE27E9BF7500BBB8A3 /* TashaDesertsShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TashaDesertsShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +63,9 @@
 		3AFF711F27F0600800C5399B /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		3AFF712127F0603400C5399B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AFF712427F0617500C5399B /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
+		3AFF712627F0625C00C5399B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		3AFF712827F0665400C5399B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		3AFF712A27F069E300C5399B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +166,7 @@
 		3ADFBCED27E9C46C00BBB8A3 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				3ADFBCC427E9BF7500BBB8A3 /* Assets.xcassets */,
+				3AFF712A27F069E300C5399B /* Assets.xcassets */,
 				3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */,
 			);
 			path = Resourses;
@@ -223,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				3AFF712427F0617500C5399B /* AuthRequestFactory.swift */,
+				3AFF712627F0625C00C5399B /* Auth.swift */,
+				3AFF712827F0665400C5399B /* RequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -338,7 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */,
-				3ADFBCC527E9BF7500BBB8A3 /* Assets.xcassets in Resources */,
+				3AFF712B27F069E300C5399B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,12 +369,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */,
 				3AFF711327F05A3500C5399B /* AbstractErrorParser.swift in Sources */,
 				3AFF711A27F05D3200C5399B /* DataRequest.swift in Sources */,
 				3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */,
 				3AFF711E27F05EA400C5399B /* RequestRouter.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
 				3AFF712027F0600800C5399B /* LoginResult.swift in Sources */,
+				3AFF712727F0625C00C5399B /* Auth.swift in Sources */,
 				3AFF712227F0603400C5399B /* User.swift in Sources */,
 				3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */,
 				3AFF711C27F05DB200C5399B /* AbstractReqestFactory.swift in Sources */,
