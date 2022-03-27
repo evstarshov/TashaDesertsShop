@@ -25,6 +25,10 @@
 		3AFF712727F0625C00C5399B /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712627F0625C00C5399B /* Auth.swift */; };
 		3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712827F0665400C5399B /* RequestFactory.swift */; };
 		3AFF712B27F069E300C5399B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AFF712A27F069E300C5399B /* Assets.xcassets */; };
+		3AFF712D27F06D3400C5399B /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712C27F06D3400C5399B /* LogoutResult.swift */; };
+		3AFF712F27F06DEC00C5399B /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF712E27F06DEC00C5399B /* Signup.swift */; };
+		3AFF713127F06EAC00C5399B /* SignupRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF713027F06EAC00C5399B /* SignupRequestFactory.swift */; };
+		3AFF713427F06EF100C5399B /* SingnupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFF713327F06EF100C5399B /* SingnupResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		3AFF712627F0625C00C5399B /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		3AFF712827F0665400C5399B /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		3AFF712A27F069E300C5399B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AFF712C27F06D3400C5399B /* LogoutResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResult.swift; sourceTree = "<group>"; };
+		3AFF712E27F06DEC00C5399B /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		3AFF713027F06EAC00C5399B /* SignupRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequestFactory.swift; sourceTree = "<group>"; };
+		3AFF713327F06EF100C5399B /* SingnupResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingnupResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,8 @@
 			children = (
 				3AFF711F27F0600800C5399B /* LoginResult.swift */,
 				3AFF712127F0603400C5399B /* User.swift */,
+				3AFF712C27F06D3400C5399B /* LogoutResult.swift */,
+				3AFF713327F06EF100C5399B /* SingnupResult.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -229,6 +239,8 @@
 				3AFF712427F0617500C5399B /* AuthRequestFactory.swift */,
 				3AFF712627F0625C00C5399B /* Auth.swift */,
 				3AFF712827F0665400C5399B /* RequestFactory.swift */,
+				3AFF712E27F06DEC00C5399B /* Signup.swift */,
+				3AFF713027F06EAC00C5399B /* SignupRequestFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -370,11 +382,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */,
+				3AFF713427F06EF100C5399B /* SingnupResult.swift in Sources */,
+				3AFF713127F06EAC00C5399B /* SignupRequestFactory.swift in Sources */,
 				3AFF711327F05A3500C5399B /* AbstractErrorParser.swift in Sources */,
+				3AFF712D27F06D3400C5399B /* LogoutResult.swift in Sources */,
 				3AFF711A27F05D3200C5399B /* DataRequest.swift in Sources */,
 				3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */,
 				3AFF711E27F05EA400C5399B /* RequestRouter.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
+				3AFF712F27F06DEC00C5399B /* Signup.swift in Sources */,
 				3AFF712027F0600800C5399B /* LoginResult.swift in Sources */,
 				3AFF712727F0625C00C5399B /* Auth.swift in Sources */,
 				3AFF712227F0603400C5399B /* User.swift in Sources */,
