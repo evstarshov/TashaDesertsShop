@@ -16,6 +16,7 @@
 		3A3A0F3127F5AA6B0097622D /* GetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3027F5AA6B0097622D /* GetCatalog.swift */; };
 		3A3A0F3327F5AC710097622D /* GetProductRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */; };
 		3A3A0F3627F5AD600097622D /* GetProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3527F5AD600097622D /* GetProduct.swift */; };
+		3A3A0F3827F5B2810097622D /* RequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3727F5B2810097622D /* RequestsTest.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		3A3A0F3027F5AA6B0097622D /* GetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalog.swift; sourceTree = "<group>"; };
 		3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequestFactory.swift; sourceTree = "<group>"; };
 		3A3A0F3527F5AD600097622D /* GetProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProduct.swift; sourceTree = "<group>"; };
+		3A3A0F3727F5B2810097622D /* RequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTest.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				3ADFBCD227E9BF7500BBB8A3 /* TashaDesertsShopTests.swift */,
 				3A3A0F2127F59F140097622D /* ResponseCodableTests.swift */,
+				3A3A0F3727F5B2810097622D /* RequestsTest.swift */,
 			);
 			path = TashaDesertsShopTests;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADFBCD327E9BF7500BBB8A3 /* TashaDesertsShopTests.swift in Sources */,
+				3A3A0F3827F5B2810097622D /* RequestsTest.swift in Sources */,
 				3A3A0F2227F59F140097622D /* ResponseCodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
