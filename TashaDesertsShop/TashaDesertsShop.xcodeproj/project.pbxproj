@@ -11,6 +11,7 @@
 		3A3A0F2527F59F3A0097622D /* TashaDesertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */; };
 		3A3A0F2627F59F3A0097622D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2427F59F3A0097622D /* Main.storyboard */; };
 		3A3A0F2A27F5A6D10097622D /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2927F5A6D10097622D /* Catalog.swift */; };
+		3A3A0F2C27F5A8130097622D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2B27F5A8130097622D /* Product.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -60,6 +61,7 @@
 		3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TashaDesertsViewController.swift; sourceTree = "<group>"; };
 		3A3A0F2427F59F3A0097622D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A3A0F2927F5A6D10097622D /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		3A3A0F2B27F5A8130097622D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				3AFF713327F06EF100C5399B /* SingnupResult.swift */,
 				3AFF713527F0731F00C5399B /* ChangeUserDataResult.swift */,
 				3A3A0F2927F5A6D10097622D /* Catalog.swift */,
+				3A3A0F2B27F5A8130097622D /* Product.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				3AFF713427F06EF100C5399B /* SingnupResult.swift in Sources */,
 				3AFF713627F0731F00C5399B /* ChangeUserDataResult.swift in Sources */,
 				3AFF713127F06EAC00C5399B /* SignupRequestFactory.swift in Sources */,
+				3A3A0F2C27F5A8130097622D /* Product.swift in Sources */,
 				3AFF711327F05A3500C5399B /* AbstractErrorParser.swift in Sources */,
 				3AFF712D27F06D3400C5399B /* LogoutResult.swift in Sources */,
 				3AFF711A27F05D3200C5399B /* DataRequest.swift in Sources */,
