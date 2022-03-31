@@ -10,7 +10,6 @@ import Alamofire
 
 
 class ChangeUserData: AbstractRequestFactory {
-    
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -31,8 +30,6 @@ extension ChangeUserData: ChangeUserDataRequestFactory {
         let requestModel = ChangeUserData(baseUrl: baseUrl, user: user)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
 }
 
 extension ChangeUserData {
@@ -40,7 +37,6 @@ extension ChangeUserData {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "changeUserData.json"
-        
         let user: User
         var parameters: Parameters? {
             return [

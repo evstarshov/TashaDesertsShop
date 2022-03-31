@@ -20,7 +20,6 @@ class TashaDesertsShopViewController: UIViewController {
     func makeAuthRequest() {
         let factory = requestFactory.makeAuthRequestFactory()
         let user = User(login: "Login", password: "Password")
-        
         factory.login(userName: user.login ?? "", password: user.password ?? "") { response in
             switch response.result {
             case .success(let result):
@@ -28,7 +27,6 @@ class TashaDesertsShopViewController: UIViewController {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-            
         }
     }
 }

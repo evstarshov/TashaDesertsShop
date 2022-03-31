@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class CustomDecodableSerializer<T: Decodable>: DataResponseSerializerProtocol {
-    
     private let errorParser: AbstractErrorParser
     
     init(errorParser: AbstractErrorParser) { self.errorParser = errorParser }
@@ -34,7 +33,7 @@ extension DataRequest {
     @discardableResult
     
     func responseCodable<T: Decodable>(errorParser: AbstractErrorParser, queue: DispatchQueue = .main, completionHandler: @escaping (AFDataResponse<T>) -> Void) -> Self {
-            let responseSerializer = CustomDecodableSerializer<T>(errorParser: errorParser)
-            return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
-        }
+        let responseSerializer = CustomDecodableSerializer<T>(errorParser: errorParser)
+        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
+    }
 }

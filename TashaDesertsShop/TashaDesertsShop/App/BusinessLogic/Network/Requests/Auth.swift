@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class Auth: AbstractRequestFactory {
-    
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -25,7 +24,6 @@ class Auth: AbstractRequestFactory {
 
 
 extension Auth: AuthRequestFactory {
-    
     func logout(user: User, completionHandler: @escaping (AFDataResponse<LogoutResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: user.login ?? "", password: user.password ?? "")
         self.request(request: requestModel, completionHandler: completionHandler)
@@ -54,7 +52,7 @@ extension Auth {
             ]
             
         }
-    
+        
     }
     
     struct Logout: RequestRouter {
