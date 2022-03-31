@@ -40,4 +40,69 @@ class  RequestsTests: XCTestCase {
         }
         wait(for: [expectation], timeout: timeoutValue)
     }
+    
+    func testShouldPerformSignupRequest() {
+        let factory = requestFactory.makeSignupRequestFactory()
+        
+        factory.signup(user: user) { response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeoutValue)
+    }
+    
+    func testShouldPerformChangeUserDataRequest() {
+        let factory = requestFactory.makeChangeUserDataRequestFactory()
+        
+        factory.changeUserData(user: user) { response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeoutValue)
+    }
+    
+    func testShouldPerformLogoutRequest() {
+        let factory = requestFactory.makeAuthRequestFactory()
+        
+        factory.logout(user: user) { response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeoutValue)
+    }
+    
+    func testShouldPerformGetCatalogRequest() {
+        let factory = requestFactory.makeGetCatalogRequestFactory()
+        
+        factory.getCatalog(pageNumber: 1, categoryId: 1) { response in
+            switch response.result {
+            case .success: break
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeoutValue)
+    }
+    
+    func testShouldPerformGetProductRequest() {
+        let factory = requestFactory.makeGetProductRequestFactory()
+        
+        factory.getProduct(productId: 123) { response in
+            switch response.result {
+            case .success(let result): XCTAssertEqual(result.result, 1)
+            case .failure: XCTFail()
+            }
+            self.expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: timeoutValue)
+    }
 }
