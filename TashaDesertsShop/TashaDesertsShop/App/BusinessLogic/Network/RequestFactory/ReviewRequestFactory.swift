@@ -8,12 +8,8 @@
 import Foundation
 import Alamofire
 
-protocol ReviewsRequestFactory {
-    func getReviews(productId: Int,
-                  completionHandler: @escaping (AFDataResponse<ReviewResult>) -> Void)
-    
-    func addReview(productId: Int, userId: Int, text: String, rating: Int,
-                  completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void)
-    
+protocol ReviewRequestFactory {
+    func getReviews(productId: Int, completionHandler: @escaping (AFDataResponse<[ReviewResult]>) -> Void)
+    func addReview(review: Review, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void)
     func removeReview(reviewId: Int, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void)
 }

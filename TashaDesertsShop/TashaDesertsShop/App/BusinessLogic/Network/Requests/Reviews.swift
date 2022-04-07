@@ -9,92 +9,79 @@ import Foundation
 import Alamofire
 
 class Reviews: AbstractRequestFactory {
-    
-    var errorParser: AbstractErrorParser
-    var sessionManager: Session
-    var queue: DispatchQueue
-    let baseUrl = URL(string: "https://vast-retreat-13451.herokuapp.com/")!
+    let errorParser: AbstractErrorParser
+    let sessionManager: Session
+    let queue: DispatchQueue
+    let baseUrl = URL(string: "https://shrouded-mountain-46406.herokuapp.com/")!
     
     init(
         errorParser: AbstractErrorParser,
         sessionManager: Session,
         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-    }
+            self.errorParser = errorParser
+            self.sessionManager = sessionManager
+            self.queue = queue
+        }
 }
 
-extension Reviews: ReviewsRequestFactory {
-    func getReviews(productId: Int, completionHandler: @escaping (AFDataResponse<ReviewResult>) -> Void) {
-        let requestModel = ReviewData(baseUrl: baseUrl, path: "getreviews", productId: productId)
-        self.request(request: requestModel, completionHandler: completionHandler)
-    }
-    
-    func addReview(productId: Int, userId: Int, text: String, rating: Int, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
-        let requestModel = ReviewData(baseUrl: baseUrl, path: "addReview", productId: productId, userId: userId, text: text, rating: rating)
-        self.request(request: requestModel, completionHandler: completionHandler)
-    }
-    
+extension Reviews: ReviewRequestFactory {
     func removeReview(reviewId: Int, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
-        let requestModel = ReviewData(baseUrl: baseUrl, path: "removeReview", reviewId: reviewId)
+        let requestModel = RemoveReview(baseUrl: baseUrl, reviewId: reviewId)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
+    func addReview(review: Review, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
+        let requestModel = AddReview(baseUrl: baseUrl, review: review)
+        self.request(request: requestModel, completionHandler: completionHandler)
+    }
+    
+    func getReviews(productId: Int, completionHandler: @escaping (AFDataResponse<[ReviewResult]>) -> Void) {
+        let requestModel = GetReviews(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 extension Reviews {
-    struct GetReviewsData: RequestRouter {
+    struct RemoveReview: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        var path: String
-        
-        let productId: Int
+        let path: String = "removereview"
+
+        let reviewId: Int
+
         var parameters: Parameters? {
             return [
-                "productId": productId
+                "reviewId": reviewId
             ]
         }
     }
     
-    struct ReviewData: RequestRouter {
+    struct AddReview: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        var path: String
-        
-        var productId: Int? = nil
-        var userId: Int? = nil
-        var text: String? = nil
-        var rating: Int? = nil
-        var reviewId: Int? = nil
+        let path: String = "addreview"
+
+        let review: Review
+
         var parameters: Parameters? {
             return [
-                "productId": productId as Any,
-                "userId": userId as Any,
-                "text": text as Any,
-                "rating": rating as Any,
-                "reviewId": reviewId as Any
+                "productId": review.productId ?? 0,
+                "userId": review.userId ?? 0,
+                "reviewText": review.reviewText ?? ""
             ]
         }
-        
-        init(baseUrl: URL, path: String, productId: Int) {
-            self.baseUrl = baseUrl
-            self.path = path
-            self.productId = productId
-        }
-        
-        init(baseUrl: URL, path: String, reviewId: Int) {
-            self.baseUrl = baseUrl
-            self.path = path
-            self.reviewId = reviewId
-        }
-        
-        init(baseUrl: URL, path: String, productId: Int, userId: Int, text: String, rating: Int) {
-            self.baseUrl = baseUrl
-            self.path = path
-            self.productId = productId
-            self.userId = userId
-            self.text = text
-            self.rating = rating
+    }
+    struct GetReviews: RequestRouter {
+        let baseUrl: URL
+        let method: HTTPMethod = .post
+        let path: String = "getreviews"
+
+        let productId: Int
+
+        var parameters: Parameters? {
+            return [
+                "productId": productId
+            ]
         }
     }
 }

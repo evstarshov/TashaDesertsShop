@@ -23,7 +23,44 @@ class TashaDesertsShopViewController: UIViewController {
         }
     }
     
-    func makeReviewrequest() {
+    // MARK: - Reviews requests.
+    func makeGetReviewsRequest() {
         let factory = requestFactory.makeReviewRequestFactory()
+        
+        factory.getReviews(productId: 123) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeAddReviewRequest() {
+        let factory = requestFactory.makeReviewRequestFactory()
+    let review = Review(reviewText: "Плохой товар, брать не советую, 1 звезда!", userId: 123, productId: 666)
+        
+        factory.addReview(review: review){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeRemoveReviewRequest() {
+        let factory = requestFactory.makeReviewRequestFactory()
+        
+        factory.removeReview(reviewId: 123){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
