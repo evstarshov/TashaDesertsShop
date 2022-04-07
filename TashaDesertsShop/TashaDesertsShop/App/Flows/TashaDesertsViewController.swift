@@ -29,4 +29,8 @@ class TashaDesertsShopViewController: UIViewController {
             }
         }
     }
+    
+    func makeReviewrequest() {
+        let factory = requestFactory.makeReviewRequestFactory()
+    }
 }
