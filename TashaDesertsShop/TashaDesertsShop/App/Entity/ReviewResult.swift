@@ -9,6 +9,6 @@ import Foundation
 
 struct ReviewResult: Codable {
     let result: Int
-    let reviews: [Review]?
+    let reviews: [ReviewRequest]?
     let errorMessage: String?
 }

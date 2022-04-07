@@ -12,7 +12,7 @@ class Reviews: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://shrouded-mountain-46406.herokuapp.com/")!
+    let baseUrl = URL(string: "https://vast-retreat-13451.herokuapp.com/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -30,7 +30,7 @@ extension Reviews: ReviewRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func addReview(review: Review, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
+    func addReview(review: ReviewRequest, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
         let requestModel = AddReview(baseUrl: baseUrl, review: review)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -61,7 +61,7 @@ extension Reviews {
         let method: HTTPMethod = .post
         let path: String = "addreview"
 
-        let review: Review
+        let review: ReviewRequest
 
         var parameters: Parameters? {
             return [

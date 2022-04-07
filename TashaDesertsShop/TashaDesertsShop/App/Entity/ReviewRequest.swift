@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Review: Codable {
+struct ReviewRequest: Codable {
     let reviewText: String?
     let userId: Int?
     let productId: Int?

@@ -6,14 +6,21 @@ class TashaDesertsShopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeAuthRequest()
+        makeSignupRequest()
+        makeChangeUserDataRequest()
+        makeLogoutRequest()
+        makeGetReviewsRequest()
+        makeAddReviewRequest()
+        makeRemoveReviewRequest()
     }
     
-    // MARK: Request methods
+    // MARK: - Auth, signup, change user data & logout requests.
     
     func makeAuthRequest() {
         let factory = requestFactory.makeAuthRequestFactory()
-        let user = User(login: "Login", password: "Password")
-        factory.login(userName: user.login ?? "", password: user.password ?? "") { response in
+        let user = User(login: "rakodill", password: "mypass")
+        
+        factory.login(user: user) { response in
             switch response.result {
             case .success(let result):
                 print(result)
@@ -22,6 +29,64 @@ class TashaDesertsShopViewController: UIViewController {
             }
         }
     }
+    
+    func makeSignupRequest() {
+        let factory = requestFactory.makeSignupRequestFactory()
+        let user = User(login: "rakodill",
+                        password: "mypass",
+                        email: "evstarshov@icloud.com",
+                        gender: "f",
+                        creditCard: "2344-4324-2344-1233-1234",
+                        bio: "Nothin intersting here",
+                        name: "Eugene",
+                        lastname: "Starshov")
+        
+        factory.signup(user: user) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeChangeUserDataRequest() {
+        let factory = requestFactory.makeChangeUserDataRequestFactory()
+        let user = User(id: 123,
+                        login: "Vadim",
+                        password: "mypassword",
+                        email: "vadim@gmail.com",
+                        gender: "f",
+                        creditCard: "2344-4324-2344-1233-1234",
+                        bio: "Nothin to tell ya folks %)",
+                        name: "Vadim",
+                        lastname: "Kichuk")
+        
+        factory.changeUserData(user: user) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeLogoutRequest() {
+        let factory = requestFactory.makeAuthRequestFactory()
+        let user = User(id: 123)
+        
+        factory.logout(user: user) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     
     // MARK: - Reviews requests.
     func makeGetReviewsRequest() {
@@ -39,7 +104,7 @@ class TashaDesertsShopViewController: UIViewController {
     
     func makeAddReviewRequest() {
         let factory = requestFactory.makeReviewRequestFactory()
-    let review = Review(reviewText: "Плохой товар, брать не советую, 1 звезда!", userId: 123, productId: 666)
+    let review = ReviewRequest(reviewText: "Плохой товар, брать не советую, 1 звезда!", userId: 123, productId: 666)
         
         factory.addReview(review: review){ response in
             switch response.result {
