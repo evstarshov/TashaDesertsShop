@@ -1,16 +1,14 @@
 //
-//  ChangeUserData.swift
+//  GetProduct.swift
 //  TashaDesertsShop
 //
-//  Created by Евгений Старшов on 27.03.2022.
+//  Created by Евгений Старшов on 31.03.2022.
 //
 
 import Foundation
 import Alamofire
 
-
-class ChangeUserData: AbstractRequestFactory {
-    
+class GetProduct: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
@@ -26,28 +24,22 @@ class ChangeUserData: AbstractRequestFactory {
         }
 }
 
-extension ChangeUserData: ChangeUserDataRequestFactory {
-    func changeUserData(user: User, completionHandler: @escaping (AFDataResponse<ChangeUserDataResult>) -> Void) {
-        let requestModel = ChangeUserData(baseUrl: baseUrl, user: user)
+extension GetProduct: GetProductRequestFactory {
+    func getProduct(productId: Int, completionHandler: @escaping (AFDataResponse<Product>) -> Void) {
+        let requestModel = GetProduct(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
-    }
-    
-    
+    } 
 }
 
-extension ChangeUserData {
-    struct ChangeUserData: RequestRouter {
+extension GetProduct {
+    struct GetProduct: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
-        
-        let user: User
+        let path: String = "getGoodById.json"
+        let productId: Int
         var parameters: Parameters? {
             return [
-                "id_user": user.id,
-                "login": user.login,
-                "name": user.name,
-                "lastname": user.lastname
+                "id_product": productId
             ]
         }
     }
