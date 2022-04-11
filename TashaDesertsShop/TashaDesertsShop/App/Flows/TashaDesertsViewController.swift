@@ -5,23 +5,11 @@ class TashaDesertsShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("Autentification...")
-//        makeAuthRequest()
-//        print("Making singup request")
-//        makeSignupRequest()
-//        print("Changing user data request")
-//        makeChangeUserDataRequest()
-//        print("Logut")
-//        makeLogoutRequest()
-//        print("Rerview requests")
+        makeAuthRequest()
+        makeSignupRequest()
+        makeChangeUserDataRequest()
+        makeLogoutRequest()
         makeGetReviewsRequest()
-//        makeAddReviewRequest()
-//        makeRemoveReviewRequest()
-//        print("Cart requests")
-//        makeGetCartRequest()
-//        makePayCartRequest()
-//        makeAddToCartRequest()
-//        makeDeleteFromCartRequest()
     }
     
     // MARK: - Auth, signup, change user data & logout requests.
