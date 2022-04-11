@@ -35,7 +35,7 @@ extension Signup {
     struct Signup: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .post
-        let path: String = "signup"
+        let path: String = "register"
         
         let user: User
         var parameters: Parameters? {
@@ -46,7 +46,9 @@ extension Signup {
                 "email": user.email ?? "",
                 "gender": user.gender ?? "",
                 "creditCard": user.creditCard ?? "",
-                "bio": user.bio ?? ""
+                "bio": user.bio ?? "",
+                "name": user.name ?? "",
+                "lastname": user.lastname ?? ""
             ]
         }
     }

@@ -35,7 +35,7 @@ extension Reviews: ReviewRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    func getReviews(productId: Int, completionHandler: @escaping (AFDataResponse<[ReviewResult]>) -> Void) {
+    func getReviews(productId: Int, completionHandler: @escaping (AFDataResponse<[ReviewResponse]>) -> Void) {
         let requestModel = GetReviews(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

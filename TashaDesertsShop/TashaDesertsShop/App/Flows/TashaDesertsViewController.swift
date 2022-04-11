@@ -5,13 +5,23 @@ class TashaDesertsShopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeAuthRequest()
-        makeSignupRequest()
-        makeChangeUserDataRequest()
-        makeLogoutRequest()
+//        print("Autentification...")
+//        makeAuthRequest()
+//        print("Making singup request")
+//        makeSignupRequest()
+//        print("Changing user data request")
+//        makeChangeUserDataRequest()
+//        print("Logut")
+//        makeLogoutRequest()
+//        print("Rerview requests")
         makeGetReviewsRequest()
-        makeAddReviewRequest()
-        makeRemoveReviewRequest()
+//        makeAddReviewRequest()
+//        makeRemoveReviewRequest()
+//        print("Cart requests")
+//        makeGetCartRequest()
+//        makePayCartRequest()
+//        makeAddToCartRequest()
+//        makeDeleteFromCartRequest()
     }
     
     // MARK: - Auth, signup, change user data & logout requests.
@@ -104,7 +114,7 @@ class TashaDesertsShopViewController: UIViewController {
     
     func makeAddReviewRequest() {
         let factory = requestFactory.makeReviewRequestFactory()
-    let review = ReviewRequest(reviewText: "Плохой товар, брать не советую, 1 звезда!", userId: 123, productId: 666)
+        let review = ReviewRequest(reviewText: "Плохой товар, брать не советую, 1 звезда!", userId: 123, productId: 666)
         
         factory.addReview(review: review){ response in
             switch response.result {
@@ -128,4 +138,64 @@ class TashaDesertsShopViewController: UIViewController {
             }
         }
     }
+    
+    
+    //MARK: Cart Requsts
+    
+    func makeGetCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.getCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makePayCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.payCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeAddToCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666, quantity: 1)
+        
+        factory.addToCart(cart: cart){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeDeleteFromCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666)
+        
+        factory.deleteFromCart(cart: cart){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
+
