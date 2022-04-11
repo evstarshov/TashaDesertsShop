@@ -10,6 +10,12 @@ class TashaDesertsShopViewController: UIViewController {
         makeChangeUserDataRequest()
         makeLogoutRequest()
         makeGetReviewsRequest()
+        makeAddReviewRequest()
+        makeRemoveReviewRequest()
+        makeGetCartRequest()
+        makePayCartRequest()
+        makeAddToCartRequest()
+        makeDeleteFromCartRequest()
     }
     
     // MARK: - Auth, signup, change user data & logout requests.
