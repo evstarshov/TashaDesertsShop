@@ -12,7 +12,7 @@ class Signup: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://vast-retreat-13451.herokuapp.com/")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -24,29 +24,31 @@ class Signup: AbstractRequestFactory {
         }
 }
 
-
 extension Signup: SignupRequestFactory {
-    func signup(user: User, completionHandler: @escaping (AFDataResponse<SignupResult>) -> Void) {
+    func signup(user: User, completionHandler: @escaping (AFDataResponse<CommonResult>) -> Void) {
         let requestModel = Signup(baseUrl: baseUrl, user: user)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
-    
-    
 }
 
 extension Signup {
     struct Signup: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "registerUser.json"
+        let method: HTTPMethod = .post
+        let path: String = "register"
         
         let user: User
         var parameters: Parameters? {
             return [
-                "id_user": user.id,
-                "login": user.login,
-                "name": user.name,
-                "lastname": user.lastname
+                "id": user.id ?? 0,
+                "login": user.login ?? "",
+                "password": user.password ?? "",
+                "email": user.email ?? "",
+                "gender": user.gender ?? "",
+                "creditCard": user.creditCard ?? "",
+                "bio": user.bio ?? "",
+                "name": user.name ?? "",
+                "lastname": user.lastname ?? ""
             ]
         }
     }
