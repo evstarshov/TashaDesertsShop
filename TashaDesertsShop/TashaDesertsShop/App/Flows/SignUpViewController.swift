@@ -64,7 +64,9 @@ class SignUpViewController: UIViewController {
     // MARK: Private methods:
     
     private func showSuccessScreen() {
-        
+        let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessSignVC") as! SuccessSignViewController
+        successVC.modalPresentationStyle = .fullScreen
+        self.present(successVC, animated: true)
     }
     
     private func isFormFilled() -> Bool {

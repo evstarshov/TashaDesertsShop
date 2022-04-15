@@ -8,8 +8,14 @@
 import UIKit
 
 class SuccessSignViewController: UIViewController {
-
+    
+    @IBOutlet weak var okButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func okButtonTapped() {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

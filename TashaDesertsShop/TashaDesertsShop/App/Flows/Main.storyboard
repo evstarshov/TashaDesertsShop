@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dnd-uA-AcQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="1150.7246376811595" y="862.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Success Sign View Controller-->
         <scene sceneID="va5-y4-VNw">
             <objects>
-                <viewController id="VOV-VC-7R1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessSignVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VOV-VC-7R1" customClass="SuccessSignViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LZG-Co-DWT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -262,6 +262,9 @@
                                 <rect key="frame" x="180.5" y="432.5" width="53" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ура!"/>
+                                <connections>
+                                    <action selector="goToMain" destination="VOV-VC-7R1" eventType="touchUpInside" id="OGi-ss-RYt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aoV-K6-486"/>
@@ -277,6 +280,9 @@
                             <constraint firstItem="ov2-dA-SJe" firstAttribute="top" secondItem="aoV-K6-486" secondAttribute="top" constant="77" id="vLu-pO-SQr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="okButton" destination="wMV-pt-Uh4" id="zYF-Lz-U0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G01-LR-XtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
