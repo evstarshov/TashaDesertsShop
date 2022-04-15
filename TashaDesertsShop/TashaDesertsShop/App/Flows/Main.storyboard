@@ -119,6 +119,111 @@
             </objects>
             <point key="canvasLocation" x="1150.7246376811595" y="137.94642857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="knV-gE-lD2">
+            <objects>
+                <viewController storyboardIdentifier="SignupVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tOP-oK-Q7Y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggq-n9-DKT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzP-kY-UpY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="817.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z23-aO-Odb">
+                                        <rect key="frame" x="143" y="8" width="130" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-br-Nf5">
+                                        <rect key="frame" x="20" y="43" width="374" height="283"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dke-of-Xbw">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-ou-qcA">
+                                                <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес электронной почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-QD-GHv">
+                                                <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-90-OBh">
+                                                <rect key="frame" x="0.0" y="126" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="М"/>
+                                                    <segment title="Ж"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-a6-gQR">
+                                                <rect key="frame" x="0.0" y="165" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpx-bS-p1c">
+                                                <rect key="frame" x="0.0" y="207" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="О себе" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-3d-iZh">
+                                                <rect key="frame" x="0.0" y="249" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-RW-WGa">
+                                        <rect key="frame" x="126" y="334" width="164" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG7-Hw-nIN">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-jl-2tl">
+                                                <rect key="frame" x="0.0" y="39" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Очистить форму"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hZJ-br-Nf5" firstAttribute="top" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="8.5" id="83l-VO-3XT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="783" id="8gi-8Z-QSw"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="top" secondItem="ZzP-kY-UpY" secondAttribute="topMargin" id="Ewd-jE-fq7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z23-aO-Odb" secondAttribute="trailing" constant="141" id="KDO-1e-VBs"/>
+                                    <constraint firstItem="kln-tq-s8E" firstAttribute="trailing" secondItem="hZJ-br-Nf5" secondAttribute="trailing" constant="20" id="Lfm-oy-6XJ"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="centerX" secondItem="ZzP-kY-UpY" secondAttribute="centerX" constant="1" id="TFf-7z-Ep2"/>
+                                    <constraint firstItem="B8c-RW-WGa" firstAttribute="top" secondItem="hZJ-br-Nf5" secondAttribute="bottom" constant="8" symbolic="YES" id="dQP-3o-1dq"/>
+                                    <constraint firstItem="B8c-RW-WGa" firstAttribute="centerX" secondItem="Z23-aO-Odb" secondAttribute="centerX" id="ien-pM-QEa"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="leading" secondItem="kln-tq-s8E" secondAttribute="leading" constant="143" id="kkt-Uw-t1F"/>
+                                    <constraint firstItem="kln-tq-s8E" firstAttribute="bottom" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="783" id="tqa-3R-G32"/>
+                                    <constraint firstItem="hZJ-br-Nf5" firstAttribute="leading" secondItem="kln-tq-s8E" secondAttribute="leading" constant="20" id="uDo-VE-StK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qUd-Oc-w4a"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kln-tq-s8E"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9n-K4-oXs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="top" secondItem="e9n-K4-oXs" secondAttribute="top" id="IwY-lW-iZx"/>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="centerX" secondItem="ggq-n9-DKT" secondAttribute="centerX" id="Lj8-fG-OzQ"/>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="leading" secondItem="e9n-K4-oXs" secondAttribute="leading" id="jxa-2U-Wk1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQO-zO-JRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="862.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="TashaIconSmall" width="270" height="180"/>
