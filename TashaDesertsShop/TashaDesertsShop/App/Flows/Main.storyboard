@@ -71,6 +71,9 @@
                                 <rect key="frame" x="133" y="378" width="148" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Войти"/>
+                                <connections>
+                                    <action selector="loginButtonTapped" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="329-Oe-yht"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-Rf-e5r">
                                 <rect key="frame" x="126" y="831" width="164" height="31"/>
@@ -79,6 +82,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="PFY-E0-fLm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rRd-eA-ci1"/>
@@ -102,6 +108,12 @@
                             <constraint firstItem="F06-f1-4Fc" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="30" id="x8m-rt-z1m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="PTk-tY-5sW" id="1bA-WJ-sS5"/>
+                        <outlet property="loginField" destination="Pap-bh-Xjb" id="8OC-sl-DRh"/>
+                        <outlet property="passwordField" destination="jQP-0a-L32" id="gsj-xN-QoY"/>
+                        <outlet property="signInButton" destination="VcE-Rf-e5r" id="eeJ-AX-DKr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waa-gp-wG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

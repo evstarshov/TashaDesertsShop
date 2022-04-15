@@ -9,21 +9,50 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var authButton: UIButton!
+    @IBOutlet weak var signInButton: UIButton!
+    
+    private let requestFactory = RequestFactory()
+    
+    // MARK: viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: IBActions
+    
+    @IBAction func loginButtonTapped() {
+        let factory = requestFactory.makeAuthRequestFactory()
+        let user = User(login: loginField.text, password: passwordField.text)
+        factory.login(user: user) { response in
+            DispatchQueue.main.async {
+                switch response.result {
+                case .success(let success): success.result == 1 ? self.proceedToMainScreen() : self.showError(success.errorMessage ?? "Неизвестная ошибка.")
+                case .failure(let error): self.showError(error.localizedDescription)
+                }
+            }
+        }
     }
-    */
+    
+    @IBAction func signUpButtonTapped() {
+        
+    }
+    
+    // MARK: Navigation
+    
+    private func proceedToMainScreen() {
+        
+    }
+    
+    // MARK: Alerts
+    
+    private func showError(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Ошибка авторизации", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок(", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
