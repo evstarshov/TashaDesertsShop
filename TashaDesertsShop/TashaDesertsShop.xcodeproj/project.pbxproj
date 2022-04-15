@@ -18,6 +18,8 @@
 		3A3A0F3627F5AD600097622D /* GetProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3527F5AD600097622D /* GetProduct.swift */; };
 		3A3A0F3827F5B2810097622D /* RequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3727F5B2810097622D /* RequestsTest.swift */; };
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
+		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
+		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -83,6 +85,8 @@
 		3A3A0F3527F5AD600097622D /* GetProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProduct.swift; sourceTree = "<group>"; };
 		3A3A0F3727F5B2810097622D /* RequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTest.swift; sourceTree = "<group>"; };
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				3A3A0F2427F59F3A0097622D /* Main.storyboard */,
 				3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */,
 				3A83CD7A2809B217008C9C44 /* AuthViewController.swift */,
+				3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */,
+				3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -498,11 +504,13 @@
 				3AF6E93D27FEEAE700760311 /* ReviewRequest.swift in Sources */,
 				3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */,
 				3A3A0F2A27F5A6D10097622D /* Catalog.swift in Sources */,
+				3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */,
 				3AFF711C27F05DB200C5399B /* AbstractReqestFactory.swift in Sources */,
 				3A3A0F3327F5AC710097622D /* GetProductRequestFactory.swift in Sources */,
 				3A3A0F3127F5AA6B0097622D /* GetCatalog.swift in Sources */,
 				3AFF711827F05AAA00C5399B /* ErrorParser.swift in Sources */,
 				3AF6E94727FF069200760311 /* CartRequest.swift in Sources */,
+				3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
