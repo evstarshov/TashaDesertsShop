@@ -38,13 +38,15 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped() {
-        
+        proceedToMainScreen()
     }
     
     // MARK: Navigation
     
     private func proceedToMainScreen() {
-        
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true)
     }
     
     // MARK: Alerts

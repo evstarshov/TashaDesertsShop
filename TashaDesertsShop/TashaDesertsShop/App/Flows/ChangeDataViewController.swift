@@ -75,6 +75,7 @@ class ChangeDataViewController: UIViewController {
     }
     
     private func showSuccessScreen() {
-        
+        let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! EditSuccessViewController
+        navigationController?.pushViewController(editSuccessVC, animated: true)
     }
 }
