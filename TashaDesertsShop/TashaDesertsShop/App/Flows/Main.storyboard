@@ -149,11 +149,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Изменить свои данные"/>
+                                        <connections>
+                                            <action selector="changeDataButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="E2O-sR-RBK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-ER-Bjv">
                                         <rect key="frame" x="0.0" y="39" width="180" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Выйти"/>
+                                        <connections>
+                                            <action selector="exitButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="oV5-zZ-jMW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -177,6 +183,10 @@
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="centerX" secondItem="2MJ-r9-pmZ" secondAttribute="centerX" constant="9" id="jIF-hh-yEL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeDataButton" destination="RMh-nX-uRz" id="zoP-ED-4xx"/>
+                        <outlet property="exitButton" destination="aIW-ER-Bjv" id="iar-25-eEV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whP-MC-UVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,6 +360,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G01-LR-XtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="863"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dr2-f1-eX9">
+            <objects>
+                <viewController storyboardIdentifier="ChangeDataVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UMh-y1-FTX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KEP-4t-nzj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tDS-LJ-BiC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkV-Sx-ycG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767" y="138"/>
         </scene>
     </scenes>
     <resources>
