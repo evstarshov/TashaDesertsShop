@@ -20,6 +20,7 @@
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
 		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
 		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
+		3A83CD812809C844008C9C44 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD802809C844008C9C44 /* MainScreenViewController.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -87,6 +88,7 @@
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
+		3A83CD802809C844008C9C44 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				3A83CD7A2809B217008C9C44 /* AuthViewController.swift */,
 				3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */,
 				3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */,
+				3A83CD802809C844008C9C44 /* MainScreenViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				3AFF711A27F05D3200C5399B /* DataRequest.swift in Sources */,
 				3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */,
 				3AF6E93F27FEEB1500760311 /* ReviewResult.swift in Sources */,
+				3A83CD812809C844008C9C44 /* MainScreenViewController.swift in Sources */,
 				3A3A0F2E27F5A9910097622D /* GetCatalogRequestFactory.swift in Sources */,
 				3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */,
 				3AFF711E27F05EA400C5399B /* RequestRouter.swift in Sources */,
