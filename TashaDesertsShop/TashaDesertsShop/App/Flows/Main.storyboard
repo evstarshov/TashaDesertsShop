@@ -35,8 +35,81 @@
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
         </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="wGE-KK-Azc">
+            <objects>
+                <viewController storyboardIdentifier="AuthController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dnd-uA-AcQ" customClass="AuthViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaK-10-e0P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TashaIconSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-4w-cu5">
+                                <rect key="frame" x="87" y="44" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в магазин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-1Q-rE5">
+                                <rect key="frame" x="141" y="180" width="132.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F06-f1-4Fc">
+                                <rect key="frame" x="30" y="275.5" width="354" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pap-bh-Xjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-0a-L32">
+                                        <rect key="frame" x="0.0" y="42" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTk-tY-5sW">
+                                <rect key="frame" x="133" y="378" width="148" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Войти"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-Rf-e5r">
+                                <rect key="frame" x="126" y="831" width="164" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="svu-1b-w9h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rRd-eA-ci1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="bottom" secondItem="zSB-4w-cu5" secondAttribute="bottom" constant="690" id="0Bw-Qd-TgH"/>
+                            <constraint firstItem="VcE-Rf-e5r" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="126" id="5m7-5F-fur"/>
+                            <constraint firstItem="VcE-Rf-e5r" firstAttribute="bottom" secondItem="rRd-eA-ci1" secondAttribute="bottom" id="7Ua-C2-nGb"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="top" secondItem="rRd-eA-ci1" secondAttribute="top" id="8Gm-yV-N2J"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="133" id="K00-IO-YaN"/>
+                            <constraint firstItem="wMU-1Q-rE5" firstAttribute="top" secondItem="zSB-4w-cu5" secondAttribute="bottom" constant="8" symbolic="YES" id="LSW-U8-uia"/>
+                            <constraint firstItem="VcE-Rf-e5r" firstAttribute="top" secondItem="PTk-tY-5sW" secondAttribute="bottom" constant="422" id="S8R-Ii-gTm"/>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="trailing" secondItem="F06-f1-4Fc" secondAttribute="trailing" constant="30" id="Tbt-nR-aHc"/>
+                            <constraint firstItem="wMU-1Q-rE5" firstAttribute="centerX" secondItem="zSB-4w-cu5" secondAttribute="centerX" id="VSi-Bo-Ag9"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="centerX" secondItem="F06-f1-4Fc" secondAttribute="centerX" id="Ws9-Kp-phg"/>
+                            <constraint firstItem="VcE-Rf-e5r" firstAttribute="centerX" secondItem="wMU-1Q-rE5" secondAttribute="centerX" id="XOx-iG-j8x"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="top" secondItem="jQP-0a-L32" secondAttribute="bottom" constant="26.5" id="b4J-gt-62a"/>
+                            <constraint firstItem="F06-f1-4Fc" firstAttribute="top" secondItem="wMU-1Q-rE5" secondAttribute="bottom" constant="75" id="u0x-7y-56P"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="87" id="v5S-IX-ULr"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="centerX" secondItem="zaK-10-e0P" secondAttribute="centerX" id="wNb-5C-a2T"/>
+                            <constraint firstItem="F06-f1-4Fc" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="30" id="x8m-rt-z1m"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waa-gp-wG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="137.94642857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="TashaIconSmall" width="270" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
