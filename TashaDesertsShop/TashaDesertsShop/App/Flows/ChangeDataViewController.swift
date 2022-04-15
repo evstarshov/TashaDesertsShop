@@ -28,11 +28,31 @@ class ChangeDataViewController: UIViewController {
     // MARK: IBAction methods:
     
     @IBAction func saveButtonTapped() {
+        saveButton.backgroundColor = UIColor.opaqueSeparator
+        saveButton.isEnabled =  false
         
+        let factory = requestFactory.makeChangeUserDataRequestFactory()
+        let user = User(id: 123,
+                        login: loginTextField.text,
+                        password: passwordTextField.text,
+                        email: emailTextField.text,
+                        gender: genderControl.selectedSegmentIndex == 0 ? "M" : "F",
+                        bio: bioTextField.text,
+                        name: nameTextField.text,
+                        lastname: lastNameTextField.text)
+        factory.changeUserData(user: user) { response in
+            DispatchQueue.main.async {
+                switch response.result {
+                case .success(let success): success.result == 1 ? self.showSuccessScreen() : self.showError(success.errorMessage ?? "Неизвестная ошибка.")
+                case .failure(let error): self.showError(error.localizedDescription)
+                }
+            }
+        }
     }
     
     @IBAction func cancelButtonTapped() {
-        
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
+        navigationController?.pushViewController(mainVC, animated: true)
     }
     
     // MARK: private methods:
@@ -46,5 +66,15 @@ class ChangeDataViewController: UIViewController {
                   return false
               }
         return true
+    }
+    
+    private func showError(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Ошибка сервера", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showSuccessScreen() {
+        
     }
 }
