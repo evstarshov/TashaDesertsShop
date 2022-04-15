@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
         let user = User(login: loginField.text,
                         password: passwordField.text,
                         email: emailField.text,
-                        gender: genderControl.selectedSegmentIndex == 0 ? "М" : "Ж",
+                        gender: genderControl.selectedSegmentIndex == 0 ? "M" : "F",
                         bio: bioField.text,
                         name: nameField.text,
                         lastname: lastnameField.text)

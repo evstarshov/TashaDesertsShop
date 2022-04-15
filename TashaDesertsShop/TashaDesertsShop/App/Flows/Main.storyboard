@@ -361,20 +361,106 @@
             </objects>
             <point key="canvasLocation" x="1981" y="863"/>
         </scene>
-        <!--View Controller-->
+        <!--Change Data View Controller-->
         <scene sceneID="Dr2-f1-eX9">
             <objects>
-                <viewController storyboardIdentifier="ChangeDataVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UMh-y1-FTX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeDataVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UMh-y1-FTX" customClass="ChangeDataViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEP-4t-nzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменить свои данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r38-bR-bbP">
+                                <rect key="frame" x="114.5" y="44" width="185.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-Nm-0f8">
+                                <rect key="frame" x="40" y="109" width="334" height="283"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-s3-721">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-8e-ytF">
+                                        <rect key="frame" x="0.0" y="42" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-W7-fu6">
+                                        <rect key="frame" x="0.0" y="84" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-fX-HfR">
+                                        <rect key="frame" x="0.0" y="126" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Электронная почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-DA-WaS">
+                                        <rect key="frame" x="0.0" y="168" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DTF-d8-ZIm">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="32"/>
+                                        <segments>
+                                            <segment title="М"/>
+                                            <segment title="Ж"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-er-j39">
+                                        <rect key="frame" x="0.0" y="249" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-jq-a2O">
+                                <rect key="frame" x="50" y="400" width="314" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0v2-7D-ieW">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-Ua-wcI">
+                                        <rect key="frame" x="0.0" y="39" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Отменить"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tDS-LJ-BiC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yEP-Nm-0f8" firstAttribute="leading" secondItem="tDS-LJ-BiC" secondAttribute="leading" constant="40" id="0pU-D8-MGO"/>
+                            <constraint firstItem="tDS-LJ-BiC" firstAttribute="trailing" secondItem="yEP-Nm-0f8" secondAttribute="trailing" constant="40" id="Axl-sQ-EGa"/>
+                            <constraint firstItem="r38-bR-bbP" firstAttribute="centerX" secondItem="KEP-4t-nzj" secondAttribute="centerX" id="Dch-2k-7XE"/>
+                            <constraint firstItem="yEP-Nm-0f8" firstAttribute="top" secondItem="r38-bR-bbP" secondAttribute="bottom" constant="44.5" id="cM9-P3-1dS"/>
+                            <constraint firstItem="tDS-LJ-BiC" firstAttribute="trailing" secondItem="jNg-jq-a2O" secondAttribute="trailing" constant="50" id="eKi-0G-XLQ"/>
+                            <constraint firstItem="jNg-jq-a2O" firstAttribute="top" secondItem="yEP-Nm-0f8" secondAttribute="bottom" constant="8" symbolic="YES" id="h6U-tn-jds"/>
+                            <constraint firstItem="r38-bR-bbP" firstAttribute="top" secondItem="tDS-LJ-BiC" secondAttribute="top" id="xvu-Pb-i1F"/>
+                            <constraint firstItem="jNg-jq-a2O" firstAttribute="leading" secondItem="tDS-LJ-BiC" secondAttribute="leading" constant="50" id="zbi-Wx-wfs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="LG1-er-j39" id="cLc-w4-1tX"/>
+                        <outlet property="cancelButton" destination="SuX-Ua-wcI" id="gbZ-nG-9Uh"/>
+                        <outlet property="emailTextField" destination="4UD-DA-WaS" id="wCu-jc-I8L"/>
+                        <outlet property="genderControl" destination="DTF-d8-ZIm" id="qmd-RL-m0l"/>
+                        <outlet property="lastNameTextField" destination="D4b-fX-HfR" id="fmB-Zy-JuX"/>
+                        <outlet property="loginTextField" destination="fA5-s3-721" id="MZ8-tS-kx0"/>
+                        <outlet property="nameTextField" destination="KDO-W7-fu6" id="vmR-uC-jjJ"/>
+                        <outlet property="passwordTextField" destination="Jaq-8e-ytF" id="QkA-HK-Koo"/>
+                        <outlet property="saveButton" destination="0v2-7D-ieW" id="gNK-oA-e8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkV-Sx-ycG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="138"/>
+            <point key="canvasLocation" x="2766.666666666667" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
