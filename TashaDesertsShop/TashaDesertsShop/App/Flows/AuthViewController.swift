@@ -20,6 +20,8 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginField.text = "rakodill"
+        passwordField.text = "mypass"
     }
     
     // MARK: IBActions
@@ -38,7 +40,9 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func signUpButtonTapped() {
-        proceedToMainScreen()
+        let singupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignupVC") as! SignUpViewController
+        singupVC.modalPresentationStyle = .fullScreen
+        self.present(singupVC, animated: true)
     }
     
     // MARK: Navigation

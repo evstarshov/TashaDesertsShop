@@ -1,21 +1,24 @@
 //
-//  SuccessSignViewController.swift
+//  SuccessDataChangeViewController.swift
 //  TashaDesertsShop
 //
-//  Created by Евгений Старшов on 15.04.2022.
+//  Created by Евгений Старшов on 16.04.2022.
 //
 
 import UIKit
 
-class SuccessSignViewController: UIViewController {
-    
-    @IBOutlet weak var okButton: UIButton!
+class SuccessDataChangeViewController: UIViewController {
+
+    @IBOutlet weak var goBackButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
-    @IBAction func okButtonTapped() {
+    //MARK: IBAction methods
+    
+    @IBAction func goToAuthButtonTapped() {
         let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
         authVC.modalPresentationStyle = .fullScreen
         self.present(authVC, animated: true)

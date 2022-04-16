@@ -23,6 +23,7 @@
 		3A83CD812809C844008C9C44 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD802809C844008C9C44 /* MainScreenViewController.swift */; };
 		3A83CD832809CD97008C9C44 /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD822809CD97008C9C44 /* ChangeDataViewController.swift */; };
 		3A83CD852809D9B1008C9C44 /* EditSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD842809D9B1008C9C44 /* EditSuccessViewController.swift */; };
+		3A83CD87280AEEAF008C9C44 /* SuccessDataChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD86280AEEAF008C9C44 /* SuccessDataChangeViewController.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -93,6 +94,7 @@
 		3A83CD802809C844008C9C44 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		3A83CD822809CD97008C9C44 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
 		3A83CD842809D9B1008C9C44 /* EditSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSuccessViewController.swift; sourceTree = "<group>"; };
+		3A83CD86280AEEAF008C9C44 /* SuccessDataChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDataChangeViewController.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */,
 				3A83CD802809C844008C9C44 /* MainScreenViewController.swift */,
 				3A83CD822809CD97008C9C44 /* ChangeDataViewController.swift */,
+				3A83CD86280AEEAF008C9C44 /* SuccessDataChangeViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				3A3A0F2527F59F3A0097622D /* TashaDesertsViewController.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
 				3AFF712F27F06DEC00C5399B /* Signup.swift in Sources */,
+				3A83CD87280AEEAF008C9C44 /* SuccessDataChangeViewController.swift in Sources */,
 				3AFF712027F0600800C5399B /* LoginResult.swift in Sources */,
 				3AFF712727F0625C00C5399B /* Auth.swift in Sources */,
 				3AF6E94B27FF073F00760311 /* CartRequestFactory.swift in Sources */,

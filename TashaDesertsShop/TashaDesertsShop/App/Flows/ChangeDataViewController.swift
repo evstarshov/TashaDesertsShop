@@ -52,7 +52,8 @@ class ChangeDataViewController: UIViewController {
     
     @IBAction func cancelButtonTapped() {
         let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
-        navigationController?.pushViewController(mainVC, animated: true)
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true)
     }
     
     // MARK: private methods:
@@ -76,6 +77,7 @@ class ChangeDataViewController: UIViewController {
     
     private func showSuccessScreen() {
         let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! EditSuccessViewController
-        navigationController?.pushViewController(editSuccessVC, animated: true)
+        editSuccessVC.modalPresentationStyle = .fullScreen
+        self.present(editSuccessVC, animated: true)
     }
 }

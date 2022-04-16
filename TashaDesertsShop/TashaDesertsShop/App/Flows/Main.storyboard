@@ -137,16 +137,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню магазина (в разработке)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CQ-oW-MHm">
-                                <rect key="frame" x="83" y="437.5" width="248" height="21"/>
+                                <rect key="frame" x="83" y="438" width="248" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-Ws-PU6">
-                                <rect key="frame" x="126" y="654" width="180" height="70"/>
+                                <rect key="frame" x="50" y="615" width="314" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-nX-uRz">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Изменить свои данные"/>
                                         <connections>
@@ -154,7 +154,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-ER-Bjv">
-                                        <rect key="frame" x="0.0" y="39" width="180" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Выйти"/>
                                         <connections>
@@ -169,18 +169,16 @@
                         <constraints>
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="105" id="6aU-aK-OCc"/>
                             <constraint firstItem="6CQ-oW-MHm" firstAttribute="centerY" secondItem="Xb9-XV-31o" secondAttribute="centerY" id="BTN-AD-yFg"/>
-                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="6CQ-oW-MHm" secondAttribute="bottom" constant="195.5" id="IEg-Ko-esf"/>
                             <constraint firstItem="3Vi-00-I4U" firstAttribute="bottom" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="593" id="Ivc-uV-Pp6"/>
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="top" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="KkK-AP-pof"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="87" id="NdM-Uc-XJh"/>
                             <constraint firstItem="6CQ-oW-MHm" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="OXp-iW-uKI"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="top" secondItem="3Vi-00-I4U" secondAttribute="top" constant="97" id="OhC-yb-QJu"/>
-                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="Xb9-XV-31o" secondAttribute="top" constant="654" id="RES-M4-RDN"/>
-                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="126" id="TOI-Z2-dQn"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="be2-mZ-cT9"/>
-                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="centerX" secondItem="7sR-LT-gOC" secondAttribute="centerX" id="eBO-40-AQm"/>
-                            <constraint firstItem="3Vi-00-I4U" firstAttribute="bottom" secondItem="B3N-Ws-PU6" secondAttribute="bottom" constant="138" id="iWM-5O-rfl"/>
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="centerX" secondItem="2MJ-r9-pmZ" secondAttribute="centerX" constant="9" id="jIF-hh-yEL"/>
+                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="50" id="jq9-fQ-3oi"/>
+                            <constraint firstItem="3Vi-00-I4U" firstAttribute="trailing" secondItem="B3N-Ws-PU6" secondAttribute="trailing" constant="50" id="lup-CR-vmd"/>
+                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="6CQ-oW-MHm" secondAttribute="bottom" constant="156.5" id="u0j-HS-wmw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -252,7 +250,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-RW-WGa">
-                                        <rect key="frame" x="126" y="334" width="164" height="70"/>
+                                        <rect key="frame" x="126" y="334" width="164" height="109"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG7-Hw-nIN">
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
@@ -268,6 +266,15 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Очистить форму"/>
                                                 <connections>
                                                     <action selector="cleanFormButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="lOh-db-Ua0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW6-Z3-3lt">
+                                                <rect key="frame" x="0.0" y="78" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вернуться"/>
+                                                <connections>
+                                                    <action selector="cleanFormButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="ALD-yg-l8y"/>
+                                                    <action selector="goBackButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="P42-fv-b8s"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -303,10 +310,12 @@
                         <outlet property="clearFormButton" destination="dAm-jl-2tl" id="pxt-rh-4GZ"/>
                         <outlet property="emailField" destination="L5n-QD-GHv" id="5Lr-My-B7W"/>
                         <outlet property="genderControl" destination="tWn-90-OBh" id="ibr-L6-4ZO"/>
+                        <outlet property="goBackButton" destination="GW6-Z3-3lt" id="6at-v9-3zH"/>
                         <outlet property="lastnameField" destination="3cH-ou-qcA" id="p9N-HB-ol1"/>
                         <outlet property="loginField" destination="EL4-a6-gQR" id="O6B-jc-MQs"/>
                         <outlet property="nameField" destination="Dke-of-Xbw" id="oaY-ti-2Pu"/>
                         <outlet property="passwordField" destination="Zpx-bS-p1c" id="oBB-uC-ZMQ"/>
+                        <outlet property="scrollView" destination="ZzP-kY-UpY" id="Vns-Tw-v7V"/>
                         <outlet property="signupButton" destination="mG7-Hw-nIN" id="j9e-1y-Psz"/>
                     </connections>
                 </viewController>
@@ -336,7 +345,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ура!"/>
                                 <connections>
-                                    <action selector="goToMain" destination="VOV-VC-7R1" eventType="touchUpInside" id="OGi-ss-RYt"/>
+                                    <action selector="okButtonTapped" destination="VOV-VC-7R1" eventType="touchUpInside" id="4W6-PH-Ybm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -354,7 +363,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="okButton" destination="wMV-pt-Uh4" id="zYF-Lz-U0f"/>
+                        <outlet property="okButton" destination="wMV-pt-Uh4" id="Xfw-xk-7h2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G01-LR-XtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -462,10 +471,10 @@
             </objects>
             <point key="canvasLocation" x="2766.666666666667" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Success Data Change View Controller-->
         <scene sceneID="jpZ-bk-z5L">
             <objects>
-                <viewController storyboardIdentifier="EditDataSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mmj-pA-IfN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditDataSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mmj-pA-IfN" customClass="SuccessDataChangeViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHB-4w-rKr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,6 +492,9 @@
                                 <rect key="frame" x="84" y="417" width="248" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Вернуться на экоан авторизации"/>
+                                <connections>
+                                    <action selector="goToAuthButtonTapped" destination="Mmj-pA-IfN" eventType="touchUpInside" id="F3s-6G-5nT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dpm-ZE-i98"/>
@@ -499,6 +511,9 @@
                             <constraint firstItem="Hjn-BG-Uv0" firstAttribute="leading" secondItem="dpm-ZE-i98" secondAttribute="leading" constant="84" id="t6w-jr-zIm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="Hjn-BG-Uv0" id="62J-UT-4gk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fR-Hu-KFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

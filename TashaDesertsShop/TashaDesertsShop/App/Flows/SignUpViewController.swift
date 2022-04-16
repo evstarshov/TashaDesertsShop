@@ -18,6 +18,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var genderControl: UISegmentedControl!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var clearFormButton: UIButton!
+    @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     private let requestFactory = RequestFactory()
     
@@ -61,6 +63,12 @@ class SignUpViewController: UIViewController {
         signupButton.isEnabled = false
     }
     
+    @IBAction func goBackButtonTapped() {
+        let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
+        authVC.modalPresentationStyle = .fullScreen
+        self.present(authVC, animated: true)
+    }
+    
     // MARK: Private methods:
     
     private func showSuccessScreen() {
@@ -85,4 +93,50 @@ class SignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func showEditError(_ errorMessage: String) {
+        let alert = UIAlertController(title: "Вы не заполнили поля", message: errorMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    // MARK: objc methods
+    
+    @objc func editingChanged(_ textField: UITextField) {
+        guard isFormFilled() else {
+            signupButton.backgroundColor = UIColor.opaqueSeparator
+            signupButton.isEnabled = false
+            return
+        }
+        signupButton.backgroundColor = UIColor.systemOrange
+        signupButton.isEnabled = true
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        var contentInset: UIEdgeInsets = self.scrollView.contentInset
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        contentInset.bottom = keyboardFrame.size.height + 50
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc func keyboardWillHide(notification:NSNotification) {
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
 }
+
+    

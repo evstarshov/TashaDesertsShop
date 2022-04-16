@@ -20,13 +20,15 @@ class MainScreenViewController: UIViewController {
     // MARK: IBAction methods:
     
     @IBAction func changeDataButtonTapped() {
-        
+        let editVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangeDataVC") as! ChangeDataViewController
+        editVC.modalPresentationStyle = .fullScreen
+        self.present(editVC, animated: true)
     }
     
     @IBAction func exitButtonTapped() {
         let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
-        navigationController?.pushViewController(authVC, animated: true)
-        
+        authVC.modalPresentationStyle = .fullScreen
+        self.present(authVC, animated: true)
     }
 
 }
