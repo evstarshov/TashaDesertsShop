@@ -28,9 +28,9 @@ class ChangeDataViewController: UIViewController {
     // MARK: IBAction methods:
     
     @IBAction func saveButtonTapped() {
+        guard isFormFilled() else { return self.showFillError() }
         saveButton.backgroundColor = UIColor.opaqueSeparator
         saveButton.isEnabled =  false
-        
         let factory = requestFactory.makeChangeUserDataRequestFactory()
         let user = User(id: 123,
                         login: loginTextField.text,
@@ -69,15 +69,23 @@ class ChangeDataViewController: UIViewController {
         return true
     }
     
+    private func showSuccessScreen() {
+        let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! SuccessDataChangeViewController
+        editSuccessVC.modalPresentationStyle = .fullScreen
+        self.present(editSuccessVC, animated: true)
+    }
+    
+    // MARK: Alerts
+    
     private func showError(_ errorMessage: String) {
         let alert = UIAlertController(title: "Ошибка сервера", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func showSuccessScreen() {
-        let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! EditSuccessViewController
-        editSuccessVC.modalPresentationStyle = .fullScreen
-        self.present(editSuccessVC, animated: true)
+    private func showFillError() {
+        let alert = UIAlertController(title: "Ошибка", message: "Пожалуйста заполните все поля", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

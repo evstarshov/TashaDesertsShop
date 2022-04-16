@@ -429,11 +429,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped" destination="UMh-y1-FTX" eventType="touchUpInside" id="RXE-l6-nLe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-Ua-wcI">
                                         <rect key="frame" x="0.0" y="39" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Отменить"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped" destination="UMh-y1-FTX" eventType="touchUpInside" id="ed1-EE-I6r"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -453,14 +459,14 @@
                     </view>
                     <connections>
                         <outlet property="bioTextField" destination="LG1-er-j39" id="cLc-w4-1tX"/>
-                        <outlet property="cancelButton" destination="SuX-Ua-wcI" id="gbZ-nG-9Uh"/>
+                        <outlet property="cancelButton" destination="SuX-Ua-wcI" id="BfL-Re-Qzi"/>
                         <outlet property="emailTextField" destination="4UD-DA-WaS" id="wCu-jc-I8L"/>
                         <outlet property="genderControl" destination="DTF-d8-ZIm" id="qmd-RL-m0l"/>
                         <outlet property="lastNameTextField" destination="D4b-fX-HfR" id="fmB-Zy-JuX"/>
                         <outlet property="loginTextField" destination="fA5-s3-721" id="MZ8-tS-kx0"/>
                         <outlet property="nameTextField" destination="KDO-W7-fu6" id="vmR-uC-jjJ"/>
                         <outlet property="passwordTextField" destination="Jaq-8e-ytF" id="QkA-HK-Koo"/>
-                        <outlet property="saveButton" destination="0v2-7D-ieW" id="gNK-oA-e8X"/>
+                        <outlet property="saveButton" destination="0v2-7D-ieW" id="zxl-fT-aD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CkV-Sx-ycG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -485,9 +491,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjn-BG-Uv0">
-                                <rect key="frame" x="84" y="417" width="248" height="31"/>
+                                <rect key="frame" x="83" y="432.5" width="248" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Вернуться на экоан авторизации"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться на экран авторизации"/>
                                 <connections>
                                     <action selector="goToAuthButtonTapped" destination="Mmj-pA-IfN" eventType="touchUpInside" id="F3s-6G-5nT"/>
                                 </connections>
@@ -499,12 +505,12 @@
                             <constraint firstItem="dpm-ZE-i98" firstAttribute="bottom" secondItem="skH-lT-19p" secondAttribute="bottom" constant="580" id="09M-X4-WZh"/>
                             <constraint firstItem="kjc-m4-3Ja" firstAttribute="leading" secondItem="dpm-ZE-i98" secondAttribute="leading" constant="87" id="4d9-92-kHc"/>
                             <constraint firstItem="skH-lT-19p" firstAttribute="centerX" secondItem="kjc-m4-3Ja" secondAttribute="centerX" id="7fT-L5-QG7"/>
+                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="centerY" secondItem="JHB-4w-rKr" secondAttribute="centerY" id="7mj-DH-X17"/>
                             <constraint firstItem="skH-lT-19p" firstAttribute="top" secondItem="kjc-m4-3Ja" secondAttribute="bottom" constant="8" symbolic="YES" id="Rq6-AZ-SB2"/>
                             <constraint firstItem="kjc-m4-3Ja" firstAttribute="top" secondItem="dpm-ZE-i98" secondAttribute="top" constant="75" id="aEN-2W-Gvn"/>
-                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="top" secondItem="skH-lT-19p" secondAttribute="bottom" constant="135" id="acg-hi-IVu"/>
+                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="centerX" secondItem="JHB-4w-rKr" secondAttribute="centerX" id="fvI-QJ-W98"/>
                             <constraint firstItem="dpm-ZE-i98" firstAttribute="bottom" secondItem="kjc-m4-3Ja" secondAttribute="bottom" constant="615" id="j5I-9R-Out"/>
                             <constraint firstItem="kjc-m4-3Ja" firstAttribute="centerX" secondItem="JHB-4w-rKr" secondAttribute="centerX" id="oMq-Nd-tKd"/>
-                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="leading" secondItem="dpm-ZE-i98" secondAttribute="leading" constant="84" id="t6w-jr-zIm"/>
                         </constraints>
                     </view>
                     <connections>
