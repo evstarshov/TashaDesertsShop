@@ -30,6 +30,7 @@ class SignUpViewController: UIViewController {
     // MARK: IBAction methods:
     
     @IBAction func signupButtonTapped() {
+        guard isFormFilled() else { return self.showEditError() }
         signupButton.backgroundColor = UIColor.opaqueSeparator
         signupButton.isEnabled = false
         
@@ -59,8 +60,8 @@ class SignUpViewController: UIViewController {
         loginField.text = ""
         passwordField.text = ""
         bioField.text = ""
-        signupButton.backgroundColor = UIColor.opaqueSeparator
-        signupButton.isEnabled = false
+        //signupButton.backgroundColor = UIColor.opaqueSeparator
+        //signupButton.isEnabled = false
     }
     
     @IBAction func goBackButtonTapped() {
@@ -94,8 +95,8 @@ class SignUpViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func showEditError(_ errorMessage: String) {
-        let alert = UIAlertController(title: "Вы не заполнили поля", message: errorMessage, preferredStyle: .alert)
+    private func showEditError() {
+        let alert = UIAlertController(title: "Вы не заполнили поля", message: "Нужно заполнить все поля", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

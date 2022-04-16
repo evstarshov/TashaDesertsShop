@@ -8,7 +8,7 @@
 import UIKit
 
 class AuthViewController: UIViewController {
-
+    
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var authButton: UIButton!
@@ -27,6 +27,7 @@ class AuthViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func loginButtonTapped() {
+        guard isFormFilled() else { return self.showFillError() }
         let factory = requestFactory.makeAuthRequestFactory()
         let user = User(login: loginField.text, password: passwordField.text)
         factory.login(user: user) { response in
@@ -60,5 +61,21 @@ class AuthViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ок(", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    private func showFillError() {
+        let alert = UIAlertController(title: "Ошибка", message: "Поля не заполнены", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок(", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: Private methods
+    
+    private func isFormFilled() -> Bool {
+        guard loginField.text != "",
+              passwordField.text != "" else {
+            return false
+        }
+        return true
+    }
+    
 }
