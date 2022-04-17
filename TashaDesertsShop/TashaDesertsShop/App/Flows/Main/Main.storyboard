@@ -132,12 +132,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Меню магазина (в разработке)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CQ-oW-MHm">
-                                <rect key="frame" x="83" y="438" width="248" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-Ws-PU6">
                                 <rect key="frame" x="50" y="615" width="314" height="70"/>
                                 <subviews>
@@ -159,27 +153,36 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jld-W1-OiH">
+                                <rect key="frame" x="60" y="351" width="294" height="194"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="TashaIconSmall"/>
+                                <connections>
+                                    <action selector="goToCatalogButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="gy9-NU-N3d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Vi-00-I4U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="top" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="9P2-2N-5a2"/>
-                            <constraint firstItem="6CQ-oW-MHm" firstAttribute="centerY" secondItem="Xb9-XV-31o" secondAttribute="centerY" id="BTN-AD-yFg"/>
                             <constraint firstItem="3Vi-00-I4U" firstAttribute="trailing" secondItem="7sR-LT-gOC" secondAttribute="trailing" constant="15" id="F7M-Sr-JkC"/>
                             <constraint firstItem="7sR-LT-gOC" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="15" id="FUe-0S-nJ8"/>
+                            <constraint firstItem="jld-W1-OiH" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="HX5-nj-X1p"/>
+                            <constraint firstItem="jld-W1-OiH" firstAttribute="centerY" secondItem="Xb9-XV-31o" secondAttribute="centerY" id="ISh-ir-ISm"/>
                             <constraint firstItem="3Vi-00-I4U" firstAttribute="bottom" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="593" id="Ivc-uV-Pp6"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="87" id="NdM-Uc-XJh"/>
-                            <constraint firstItem="6CQ-oW-MHm" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="OXp-iW-uKI"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="top" secondItem="3Vi-00-I4U" secondAttribute="top" constant="97" id="OhC-yb-QJu"/>
+                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="jld-W1-OiH" secondAttribute="bottom" constant="70" id="X5F-It-ili"/>
                             <constraint firstItem="2MJ-r9-pmZ" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="be2-mZ-cT9"/>
                             <constraint firstItem="B3N-Ws-PU6" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="50" id="jq9-fQ-3oi"/>
                             <constraint firstItem="3Vi-00-I4U" firstAttribute="trailing" secondItem="B3N-Ws-PU6" secondAttribute="trailing" constant="50" id="lup-CR-vmd"/>
-                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="6CQ-oW-MHm" secondAttribute="bottom" constant="156.5" id="u0j-HS-wmw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="changeDataButton" destination="RMh-nX-uRz" id="zoP-ED-4xx"/>
                         <outlet property="exitButton" destination="aIW-ER-Bjv" id="iar-25-eEV"/>
+                        <outlet property="goToCatalogButton" destination="jld-W1-OiH" id="bro-df-qFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whP-MC-UVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -365,6 +368,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G01-LR-XtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1981" y="863"/>
+        </scene>
+        <!--Cakes Table View Controller-->
+        <scene sceneID="ngZ-b7-Y36">
+            <objects>
+                <tableViewController storyboardIdentifier="cakesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-va-rYS" customClass="CakesTableViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SVA-oq-jRG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="M6D-pK-LO8">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M6D-pK-LO8" id="bRp-Bt-Fgd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FnE-va-rYS" id="QzI-4r-FvZ"/>
+                            <outlet property="delegate" destination="FnE-va-rYS" id="QRe-i6-2eA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-bY-DGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797" y="868"/>
         </scene>
         <!--Change Data View Controller-->
         <scene sceneID="Dr2-f1-eX9">

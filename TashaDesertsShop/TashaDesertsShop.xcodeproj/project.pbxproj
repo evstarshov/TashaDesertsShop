@@ -23,6 +23,10 @@
 		3A83CD812809C844008C9C44 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD802809C844008C9C44 /* MainScreenViewController.swift */; };
 		3A83CD832809CD97008C9C44 /* ChangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD822809CD97008C9C44 /* ChangeDataViewController.swift */; };
 		3A83CD87280AEEAF008C9C44 /* SuccessDataChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD86280AEEAF008C9C44 /* SuccessDataChangeViewController.swift */; };
+		3AB64532280C4B910047EDB9 /* CakesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB64531280C4B910047EDB9 /* CakesTableViewController.swift */; };
+		3AB64536280C4CAE0047EDB9 /* CakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB64534280C4CAE0047EDB9 /* CakeTableViewCell.swift */; };
+		3AB64537280C4CAE0047EDB9 /* CakeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB64535280C4CAE0047EDB9 /* CakeTableViewCell.xib */; };
+		3AB64539280C60D20047EDB9 /* CatalogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB64538280C60D20047EDB9 /* CatalogResponse.swift */; };
 		3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */; };
 		3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */; };
 		3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADFBCC627E9BF7500BBB8A3 /* LaunchScreen.storyboard */; };
@@ -93,6 +97,10 @@
 		3A83CD802809C844008C9C44 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		3A83CD822809CD97008C9C44 /* ChangeDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDataViewController.swift; sourceTree = "<group>"; };
 		3A83CD86280AEEAF008C9C44 /* SuccessDataChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDataChangeViewController.swift; sourceTree = "<group>"; };
+		3AB64531280C4B910047EDB9 /* CakesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakesTableViewController.swift; sourceTree = "<group>"; };
+		3AB64534280C4CAE0047EDB9 /* CakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeTableViewCell.swift; sourceTree = "<group>"; };
+		3AB64535280C4CAE0047EDB9 /* CakeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeTableViewCell.xib; sourceTree = "<group>"; };
+		3AB64538280C60D20047EDB9 /* CatalogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResponse.swift; sourceTree = "<group>"; };
 		3ADFBCB827E9BF7000BBB8A3 /* TashaDesertsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TashaDesertsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADFBCBB27E9BF7000BBB8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADFBCBD27E9BF7000BBB8A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +230,24 @@
 			path = ChangeDataViewController;
 			sourceTree = "<group>";
 		};
+		3AB64530280C4B670047EDB9 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				3AB64533280C4C9A0047EDB9 /* Cell */,
+				3AB64531280C4B910047EDB9 /* CakesTableViewController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		3AB64533280C4C9A0047EDB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AB64534280C4CAE0047EDB9 /* CakeTableViewCell.swift */,
+				3AB64535280C4CAE0047EDB9 /* CakeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3ADFBCAF27E9BF7000BBB8A3 = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +359,7 @@
 				3AF6E94227FEECAF00760311 /* CommonResult.swift */,
 				3AF6E94627FF069200760311 /* CartRequest.swift */,
 				3AF6E94827FF06FE00760311 /* CartResponse.swift */,
+				3AB64538280C60D20047EDB9 /* CatalogResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -347,6 +374,7 @@
 		3ADFBCF227E9C4DF00BBB8A3 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				3AB64530280C4B670047EDB9 /* Catalog */,
 				3AB6452F280C49E40047EDB9 /* ChangeDataViewController */,
 				3AB6452E280C499A0047EDB9 /* Main */,
 				3AB6452D280C48600047EDB9 /* SignupController */,
@@ -488,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADFBCC827E9BF7500BBB8A3 /* LaunchScreen.storyboard in Resources */,
+				3AB64537280C4CAE0047EDB9 /* CakeTableViewCell.xib in Resources */,
 				3A3A0F2627F59F3A0097622D /* Main.storyboard in Resources */,
 				3AFF712B27F069E300C5399B /* Assets.xcassets in Resources */,
 			);
@@ -516,6 +545,7 @@
 			files = (
 				3AFF713A27F0741400C5399B /* ChangeUserData.swift in Sources */,
 				3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */,
+				3AB64539280C60D20047EDB9 /* CatalogResponse.swift in Sources */,
 				3AFF713427F06EF100C5399B /* SingnupResult.swift in Sources */,
 				3AF6E94327FEECAF00760311 /* CommonResult.swift in Sources */,
 				3AFF713627F0731F00C5399B /* ChangeUserDataResult.swift in Sources */,
@@ -536,6 +566,7 @@
 				3A3A0F2527F59F3A0097622D /* TashaDesertsViewController.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
 				3AFF712F27F06DEC00C5399B /* Signup.swift in Sources */,
+				3AB64536280C4CAE0047EDB9 /* CakeTableViewCell.swift in Sources */,
 				3A83CD87280AEEAF008C9C44 /* SuccessDataChangeViewController.swift in Sources */,
 				3AFF712027F0600800C5399B /* LoginResult.swift in Sources */,
 				3AFF712727F0625C00C5399B /* Auth.swift in Sources */,
@@ -555,6 +586,7 @@
 				3AFF711827F05AAA00C5399B /* ErrorParser.swift in Sources */,
 				3AF6E94727FF069200760311 /* CartRequest.swift in Sources */,
 				3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */,
+				3AB64532280C4B910047EDB9 /* CakesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

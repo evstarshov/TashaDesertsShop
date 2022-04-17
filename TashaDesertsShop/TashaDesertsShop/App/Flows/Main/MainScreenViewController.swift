@@ -10,6 +10,7 @@ import UIKit
 class MainScreenViewController: UIViewController {
     
     @IBOutlet weak var changeDataButton: UIButton!
+    @IBOutlet weak var goToCatalogButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
 
@@ -29,6 +30,12 @@ class MainScreenViewController: UIViewController {
         let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
         authVC.modalPresentationStyle = .fullScreen
         self.present(authVC, animated: true)
+    }
+    
+    @IBAction func goToCatalogButtonTapped() {
+        let cakesTVC = self.storyboard?.instantiateViewController(withIdentifier: "cakesVC") as! CakesTableViewController
+        cakesTVC.modalPresentationStyle = .fullScreen
+        self.present(cakesTVC, animated: true)
     }
 
 }
