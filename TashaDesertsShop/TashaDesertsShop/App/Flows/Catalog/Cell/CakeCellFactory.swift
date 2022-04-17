@@ -16,7 +16,7 @@ struct CatalogResponseModel: Codable {
 }
 
 final class CakesCellFactory {
-    static func cakeCellFactory(from model: CatalogResponse) -> CatalogResponseModel {
+    static func cellModel(from model: CatalogResponse) -> CatalogResponseModel {
         return CatalogResponseModel(productId: model.productId, productName: model.productName, price: model.price, shortDescription: model.shortDescription, picUrl: model.picUrl)
     }
 }

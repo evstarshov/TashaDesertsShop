@@ -9,16 +9,23 @@ import UIKit
 
 class CakesTableViewController: UITableViewController {
     private let requestFactory = RequestFactory()
-    private var catalog: [CatalogResponse] = []
+    var catalog: [CatalogResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getCatalog()
-        tableView.register(CakeTableViewCell.self, forCellReuseIdentifier: "cakesCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cakesCell")
+        tableView.register(
+                    UINib(
+                        nibName: "CakeTableViewCell",
+                        bundle: nil),
+                    forCellReuseIdentifier: "cakesCell")
         tableView.reloadData()
     }
     
     // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return catalog.count
@@ -26,6 +33,9 @@ class CakesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cakesCell", for: indexPath) as! CakeTableViewCell
+        let item = self.catalog[indexPath.row]
+        let cellModel = CakesCellFactory.cellModel(from: item)
+        cell.configure(with: cellModel)
         return cell
     }
     
