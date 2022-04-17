@@ -17,23 +17,40 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-1b-tJF">
-                        <rect key="frame" x="5" y="10" width="367" height="180"/>
+                        <rect key="frame" x="5" y="10" width="377.5" height="180"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agd-8b-sLB">
-                        <rect key="frame" x="382" y="21" width="88" height="158"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="igW-xF-SYR">
+                        <rect key="frame" x="387.5" y="21" width="87.5" height="158"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60o-qa-h1P">
+                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="117"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agd-8b-sLB">
+                                <rect key="frame" x="0.0" y="117" width="87.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDw-9t-18H">
+                                <rect key="frame" x="0.0" y="137.5" width="87.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="fbk-1b-tJF" secondAttribute="bottom" constant="10" id="0sR-Fo-aUh"/>
-                    <constraint firstItem="Agd-8b-sLB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="3lm-q7-9vf"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Agd-8b-sLB" secondAttribute="trailing" constant="10" id="B5Z-2s-4YS"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Agd-8b-sLB" secondAttribute="bottom" constant="10" id="O2F-5G-71n"/>
-                    <constraint firstItem="Agd-8b-sLB" firstAttribute="leading" secondItem="fbk-1b-tJF" secondAttribute="trailing" constant="10" id="OwG-mI-Aei"/>
-                    <constraint firstItem="fbk-1b-tJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="aoF-UF-VzU"/>
-                    <constraint firstItem="fbk-1b-tJF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lvH-7a-7LQ"/>
+                    <constraint firstItem="igW-xF-SYR" firstAttribute="leading" secondItem="fbk-1b-tJF" secondAttribute="trailing" constant="5" id="GFr-86-Yrn"/>
+                    <constraint firstItem="igW-xF-SYR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Psd-O0-Xw3"/>
+                    <constraint firstItem="fbk-1b-tJF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Zq2-nf-upB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="igW-xF-SYR" secondAttribute="trailing" constant="5" id="aWw-gj-1om"/>
+                    <constraint firstItem="fbk-1b-tJF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rXJ-99-wAY"/>
+                    <constraint firstAttribute="bottom" secondItem="fbk-1b-tJF" secondAttribute="bottom" constant="10" id="tnW-fs-5nj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="igW-xF-SYR" secondAttribute="bottom" constant="10" id="vsf-cG-luK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

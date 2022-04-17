@@ -14,16 +14,19 @@ class CakesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCatalog()
-        
-        //        tableView.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "headerCell")
-        //        tableView.register(CakeTableViewCell.self, forHeaderFooterViewReuseIdentifier: "catalogCell")
-        //        tableView.reloadData()
+        tableView.register(CakeTableViewCell.self, forCellReuseIdentifier: "cakesCell")
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return catalog.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cakesCell", for: indexPath) as! CakeTableViewCell
+        return cell
     }
     
     // MARK: Private methods
