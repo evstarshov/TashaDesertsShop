@@ -20,6 +20,7 @@ class CakesTableViewController: UITableViewController {
                         nibName: "CakeTableViewCell",
                         bundle: nil),
                     forCellReuseIdentifier: "cakesCell")
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.reloadData()
     }
     
