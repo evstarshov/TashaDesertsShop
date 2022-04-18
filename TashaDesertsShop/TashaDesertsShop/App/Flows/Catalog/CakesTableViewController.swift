@@ -8,9 +8,17 @@
 import UIKit
 
 class CakesTableViewController: UITableViewController {
-    private let requestFactory = RequestFactory()
-    var catalog: [CatalogResponse] = []
     
+    // MARK: IBOutlets:
+    
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
+    // MARK: Private properties:
+    
+    private let requestFactory = RequestFactory()
+    private var catalog: [CatalogResponse] = []
+    
+    //MARK: Lifecycle methods:
     override func viewDidLoad() {
         super.viewDidLoad()
         getCatalog()
@@ -38,6 +46,14 @@ class CakesTableViewController: UITableViewController {
         let cellModel = CakesCellFactory.cellModel(from: item)
         cell.configure(with: cellModel)
         return cell
+    }
+    
+    //MARK: IBAction methods:
+    
+    @IBAction func backButtonTapped() {
+        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
+        mainVC.modalPresentationStyle = .fullScreen
+        self.present(mainVC, animated: true)
     }
     
     // MARK: Private methods

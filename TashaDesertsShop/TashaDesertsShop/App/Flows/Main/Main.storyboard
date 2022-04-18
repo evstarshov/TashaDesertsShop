@@ -377,9 +377,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="ijh-N6-YoG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Торты" id="yZt-tv-Zbk">
+                                    <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="oe7-Qf-c4u">
+                                        <connections>
+                                            <action selector="backButtonTapped" destination="FnE-va-rYS" id="0hD-c8-j3T"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cakesCell" id="M6D-pK-LO8">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M6D-pK-LO8" id="bRp-Bt-Fgd">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -392,6 +405,9 @@
                             <outlet property="delegate" destination="FnE-va-rYS" id="QRe-i6-2eA"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="backButton" destination="oe7-Qf-c4u" id="1Po-tM-9GX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-bY-DGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -556,6 +572,7 @@
     <resources>
         <image name="TashaIconLarge" width="551" height="251"/>
         <image name="TashaIconSmall" width="270" height="180"/>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,7 +14,7 @@ class CakeTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var productImage: RoundImage!
+    @IBOutlet weak var productImage: RoundImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,13 +37,24 @@ class CakeTableViewCell: UITableViewCell {
     }
 }
 
-final class RoundImage: UIImageView {
-    @IBInspectable var borderColor: UIColor = .gray
-    @IBInspectable var borderWidth: CGFloat = 1.5
-    override func awakeFromNib() {
-        self.layer.cornerRadius = self.frame.height / 2
-        self.layer.masksToBounds = true
-        self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor.cgColor
+class RoundImageView: UIImageView {
+    
+    override func layoutSubviews() {
+        self.layer.cornerRadius = self.bounds.width / 2
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tap)
+    }
+    
+    @IBAction func tapFunction(sender: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.75,
+                                    delay: 0,
+                                    usingSpringWithDamping: 0.25,
+                                    initialSpringVelocity: 0.75,
+                                    options: [.allowUserInteraction],
+                                    animations: {
+                                        self.bounds = self.bounds.insetBy(dx: 20, dy: 20)
+                                    },
+                                    completion: nil)
     }
 }
