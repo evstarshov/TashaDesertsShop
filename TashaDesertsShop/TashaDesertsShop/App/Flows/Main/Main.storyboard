@@ -133,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-Ws-PU6">
-                                <rect key="frame" x="50" y="615" width="314" height="70"/>
+                                <rect key="frame" x="50" y="622.5" width="314" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-nX-uRz">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
@@ -154,9 +154,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jld-W1-OiH">
-                                <rect key="frame" x="60" y="351" width="294" height="194"/>
+                                <rect key="frame" x="60" y="344" width="294" height="208.5"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="TashaIconSmall"/>
+                                <buttonConfiguration key="configuration" style="plain" image="TashaIconSmall" imagePlacement="top" subtitle="Торты"/>
                                 <connections>
                                     <action selector="goToCatalogButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="gy9-NU-N3d"/>
                                 </connections>

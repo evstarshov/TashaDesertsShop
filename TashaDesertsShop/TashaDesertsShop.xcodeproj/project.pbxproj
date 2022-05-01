@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A3A0F2227F59F140097622D /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2127F59F140097622D /* ResponseCodableTests.swift */; };
-		3A3A0F2527F59F3A0097622D /* TashaDesertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */; };
 		3A3A0F2627F59F3A0097622D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2427F59F3A0097622D /* Main.storyboard */; };
 		3A3A0F2A27F5A6D10097622D /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2927F5A6D10097622D /* Catalog.swift */; };
 		3A3A0F2C27F5A8130097622D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2B27F5A8130097622D /* Product.swift */; };
@@ -84,7 +83,6 @@
 
 /* Begin PBXFileReference section */
 		3A3A0F2127F59F140097622D /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
-		3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TashaDesertsViewController.swift; sourceTree = "<group>"; };
 		3A3A0F2427F59F3A0097622D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A3A0F2927F5A6D10097622D /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
 		3A3A0F2B27F5A8130097622D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -385,7 +383,6 @@
 				3AB6452E280C499A0047EDB9 /* Main */,
 				3AB6452D280C48600047EDB9 /* SignupController */,
 				3AB6452C280C484C0047EDB9 /* AuthController */,
-				3A3A0F2327F59F3A0097622D /* TashaDesertsViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -579,7 +576,6 @@
 				3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */,
 				3AFF711E27F05EA400C5399B /* RequestRouter.swift in Sources */,
 				3AB6453B280C6B070047EDB9 /* CakeCellFactory.swift in Sources */,
-				3A3A0F2527F59F3A0097622D /* TashaDesertsViewController.swift in Sources */,
 				3ADFBCBC27E9BF7000BBB8A3 /* AppDelegate.swift in Sources */,
 				3AFF712F27F06DEC00C5399B /* Signup.swift in Sources */,
 				3AB64536280C4CAE0047EDB9 /* CakeTableViewCell.swift in Sources */,
