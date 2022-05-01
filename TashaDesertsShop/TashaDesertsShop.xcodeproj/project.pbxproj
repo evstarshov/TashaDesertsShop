@@ -16,6 +16,7 @@
 		3A3A0F3327F5AC710097622D /* GetProductRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */; };
 		3A3A0F3627F5AD600097622D /* GetProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3527F5AD600097622D /* GetProduct.swift */; };
 		3A3A0F3827F5B2810097622D /* RequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3727F5B2810097622D /* RequestsTest.swift */; };
+		3A4A312D281EE6F20007DF4E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A312C281EE6F20007DF4E /* RoundImageView.swift */; };
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
 		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
 		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
@@ -91,6 +92,7 @@
 		3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequestFactory.swift; sourceTree = "<group>"; };
 		3A3A0F3527F5AD600097622D /* GetProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProduct.swift; sourceTree = "<group>"; };
 		3A3A0F3727F5B2810097622D /* RequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTest.swift; sourceTree = "<group>"; };
+		3A4A312C281EE6F20007DF4E /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 				3AF6E94C27FF07B700760311 /* CartReqests.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		3A4A312B281EE6D10007DF4E /* UIcomponents */ = {
+			isa = PBXGroup;
+			children = (
+				3A4A312C281EE6F20007DF4E /* RoundImageView.swift */,
+			);
+			path = UIcomponents;
 			sourceTree = "<group>";
 		};
 		3AB6452C280C484C0047EDB9 /* AuthController */ = {
@@ -317,6 +327,7 @@
 		3ADFBCEC27E9C46100BBB8A3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3A4A312B281EE6D10007DF4E /* UIcomponents */,
 				3AEF4E99280C89BF00DB55CD /* Extensions */,
 				3AFF711127F05A0E00C5399B /* Network */,
 			);
@@ -587,6 +598,7 @@
 				3AFF713827F0737500C5399B /* ChangeUserDataRequestFactory.swift in Sources */,
 				3AFF712227F0603400C5399B /* User.swift in Sources */,
 				3AF6E94527FEED1900760311 /* Reviews.swift in Sources */,
+				3A4A312D281EE6F20007DF4E /* RoundImageView.swift in Sources */,
 				3AF6E94927FF06FE00760311 /* CartResponse.swift in Sources */,
 				3AF6E93D27FEEAE700760311 /* ReviewRequest.swift in Sources */,
 				3ADFBCBE27E9BF7000BBB8A3 /* SceneDelegate.swift in Sources */,
