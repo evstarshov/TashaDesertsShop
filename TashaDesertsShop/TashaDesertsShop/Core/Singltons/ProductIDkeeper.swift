@@ -8,6 +8,6 @@
 import Foundation
 
 final class ProductIdKeeper {
-    static var productId = 0
+    static var productId: Int?
     private init(){}
 }

@@ -27,12 +27,29 @@ class CakeItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        productId = ProductIdKeeper.productId
+        getItem { product in
+            DispatchQueue.main.async {
+                self.nameLabel.text = product.productName
+                self.descriptionLabel.text = product.description
+                self.priceLabel.text = String(product.price ?? 0)
+                if let imageUrl = URL(string: product.picUrl ?? "https://www.pngjoy.com/pngm/309/5828658_trailer-hd-omg-404-not-found-transparent-png.png") {
+                    self.itemImageView.loadImage(url: imageUrl)
+                }
+            }
+        }
     }
     
     // MARK: IBAction methods:
     
     @IBAction func addtoCartButtonTapped() {
-        
+        print("Added to cart")
+    }
+    
+    @IBAction func backButtonTapped() {
+        let cakeVC = self.storyboard?.instantiateViewController(withIdentifier: "cakesVC") as! CakesTableViewController
+        cakeVC.modalPresentationStyle = .fullScreen
+        self.present(cakeVC, animated: true)
     }
     
     // MARK: Private methods:

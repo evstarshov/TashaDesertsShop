@@ -39,7 +39,7 @@ extension GetProduct {
         let productId: Int
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "productId": productId
             ]
         }
     }
