@@ -416,7 +416,7 @@
         <!--Cake Item View Controller-->
         <scene sceneID="or4-gL-pMS">
             <objects>
-                <viewController id="AwL-m7-dM6" customClass="CakeItemViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AwL-m7-dM6" customClass="CakeItemViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dgm-Yl-eW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -48,6 +48,14 @@ class CakesTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productId = catalog[indexPath.row].productId
+        ProductIdKeeper.productId = productId ?? 0
+        let itemVC = self.storyboard?.instantiateViewController(withIdentifier: "itemVC") as! CakeItemViewController
+        itemVC.modalPresentationStyle = .fullScreen
+        self.present(itemVC, animated: true)
+    }
+    
     //MARK: IBAction methods:
     
     @IBAction func backButtonTapped() {
