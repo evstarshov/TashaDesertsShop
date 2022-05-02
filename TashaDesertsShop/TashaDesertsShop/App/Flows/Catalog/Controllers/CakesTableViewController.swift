@@ -9,10 +9,6 @@ import UIKit
 
 class CakesTableViewController: UITableViewController {
     
-    // MARK: IBOutlets:
-    
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    
     // MARK: Private properties:
     
     private let requestFactory = RequestFactory()
@@ -22,14 +18,8 @@ class CakesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getCatalog()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cakesCell")
-        tableView.register(
-                    UINib(
-                        nibName: "CakeTableViewCell",
-                        bundle: nil),
-                    forCellReuseIdentifier: "cakesCell")
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.reloadData()
+        setTableview()
+        setNavigationBar()
     }
     
     // MARK: - Table view data source
@@ -52,17 +42,9 @@ class CakesTableViewController: UITableViewController {
         let productId = catalog[indexPath.row].productId
         ProductIdKeeper.productId = productId ?? 0
         let itemVC = self.storyboard?.instantiateViewController(withIdentifier: "itemVC") as! CakeItemViewController
-        itemVC.modalPresentationStyle = .fullScreen
-        self.present(itemVC, animated: true)
+        self.navigationController?.pushViewController(itemVC, animated: true)
     }
     
-    //MARK: IBAction methods:
-    
-    @IBAction func backButtonTapped() {
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
-        mainVC.modalPresentationStyle = .fullScreen
-        self.present(mainVC, animated: true)
-    }
     
     // MARK: Private methods
     
@@ -79,5 +61,20 @@ class CakesTableViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    private func setTableview() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cakesCell")
+        tableView.register(
+            UINib(
+                nibName: "CakeTableViewCell",
+                bundle: nil),
+            forCellReuseIdentifier: "cakesCell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.reloadData()
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }

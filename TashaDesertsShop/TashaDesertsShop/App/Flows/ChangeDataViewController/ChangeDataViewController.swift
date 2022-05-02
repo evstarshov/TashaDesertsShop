@@ -51,9 +51,7 @@ class ChangeDataViewController: UIViewController {
     }
     
     @IBAction func cancelButtonTapped() {
-        let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
-        mainVC.modalPresentationStyle = .fullScreen
-        self.present(mainVC, animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     // MARK: private methods:
@@ -63,15 +61,17 @@ class ChangeDataViewController: UIViewController {
               lastNameTextField.text != "",
               emailTextField.text != "",
               loginTextField.text != "",
-              passwordTextField.text != "" else {
-                  return false
-              }
+              passwordTextField.text != "",
+              bioTextField.text != "" else {
+            return false
+        }
         return true
     }
     
     private func showSuccessScreen() {
+        print("opening suscess vc")
         let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! SuccessDataChangeViewController
-        editSuccessVC.modalPresentationStyle = .fullScreen
+        self.navigationController?.modalPresentationStyle = .fullScreen
         self.present(editSuccessVC, animated: true)
     }
     

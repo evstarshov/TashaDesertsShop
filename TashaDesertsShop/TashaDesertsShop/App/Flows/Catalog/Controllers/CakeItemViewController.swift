@@ -11,12 +11,14 @@ class CakeItemViewController: UIViewController {
     
     // MARK: IBOoutlets:
     
-    @IBOutlet weak var itemImageView: RoundImageView!
+    @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
-    @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var backButtonItem: UIButton!
+    @IBOutlet weak var itemStackView: UIStackView!
+   
     
     // MARK: Private properties:
     

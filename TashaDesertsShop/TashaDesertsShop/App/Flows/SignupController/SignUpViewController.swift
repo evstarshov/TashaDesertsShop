@@ -60,14 +60,10 @@ class SignUpViewController: UIViewController {
         loginField.text = ""
         passwordField.text = ""
         bioField.text = ""
-        //signupButton.backgroundColor = UIColor.opaqueSeparator
-        //signupButton.isEnabled = false
     }
     
     @IBAction func goBackButtonTapped() {
-        let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
-        authVC.modalPresentationStyle = .fullScreen
-        self.present(authVC, animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     // MARK: Private methods:
@@ -75,7 +71,7 @@ class SignUpViewController: UIViewController {
     private func showSuccessScreen() {
         let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessSignVC") as! SuccessSignViewController
         successVC.modalPresentationStyle = .fullScreen
-        self.present(successVC, animated: true)
+        self.present(successVC, animated: true, completion: nil)
     }
     
     private func isFormFilled() -> Bool {
