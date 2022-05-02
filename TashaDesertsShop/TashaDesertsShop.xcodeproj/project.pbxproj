@@ -10,13 +10,14 @@
 		3A3A0F2227F59F140097622D /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2127F59F140097622D /* ResponseCodableTests.swift */; };
 		3A3A0F2627F59F3A0097622D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2427F59F3A0097622D /* Main.storyboard */; };
 		3A3A0F2A27F5A6D10097622D /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2927F5A6D10097622D /* Catalog.swift */; };
-		3A3A0F2C27F5A8130097622D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2B27F5A8130097622D /* Product.swift */; };
 		3A3A0F2E27F5A9910097622D /* GetCatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F2D27F5A9910097622D /* GetCatalogRequestFactory.swift */; };
 		3A3A0F3127F5AA6B0097622D /* GetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3027F5AA6B0097622D /* GetCatalog.swift */; };
 		3A3A0F3327F5AC710097622D /* GetProductRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */; };
 		3A3A0F3627F5AD600097622D /* GetProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3527F5AD600097622D /* GetProduct.swift */; };
 		3A3A0F3827F5B2810097622D /* RequestsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3A0F3727F5B2810097622D /* RequestsTest.swift */; };
 		3A4A312D281EE6F20007DF4E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A312C281EE6F20007DF4E /* RoundImageView.swift */; };
+		3A4A3130281FDAE10007DF4E /* CakeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A312F281FDAE10007DF4E /* CakeItemViewController.swift */; };
+		3A4A3132281FE2D20007DF4E /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A3131281FE2D20007DF4E /* ProductResponse.swift */; };
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
 		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
 		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
@@ -86,13 +87,14 @@
 		3A3A0F2127F59F140097622D /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		3A3A0F2427F59F3A0097622D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A3A0F2927F5A6D10097622D /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
-		3A3A0F2B27F5A8130097622D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3A3A0F2D27F5A9910097622D /* GetCatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogRequestFactory.swift; sourceTree = "<group>"; };
 		3A3A0F3027F5AA6B0097622D /* GetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalog.swift; sourceTree = "<group>"; };
 		3A3A0F3227F5AC710097622D /* GetProductRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductRequestFactory.swift; sourceTree = "<group>"; };
 		3A3A0F3527F5AD600097622D /* GetProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProduct.swift; sourceTree = "<group>"; };
 		3A3A0F3727F5B2810097622D /* RequestsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTest.swift; sourceTree = "<group>"; };
 		3A4A312C281EE6F20007DF4E /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		3A4A312F281FDAE10007DF4E /* CakeItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemViewController.swift; sourceTree = "<group>"; };
+		3A4A3131281FE2D20007DF4E /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,15 @@
 			path = UIcomponents;
 			sourceTree = "<group>";
 		};
+		3A4A312E281FDAB90007DF4E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AB64531280C4B910047EDB9 /* CakesTableViewController.swift */,
+				3A4A312F281FDAE10007DF4E /* CakeItemViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3AB6452C280C484C0047EDB9 /* AuthController */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,8 +256,8 @@
 		3AB64530280C4B670047EDB9 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				3A4A312E281FDAB90007DF4E /* Controllers */,
 				3AB64533280C4C9A0047EDB9 /* Cell */,
-				3AB64531280C4B910047EDB9 /* CakesTableViewController.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -368,13 +379,13 @@
 				3AFF713327F06EF100C5399B /* SingnupResult.swift */,
 				3AFF713527F0731F00C5399B /* ChangeUserDataResult.swift */,
 				3A3A0F2927F5A6D10097622D /* Catalog.swift */,
-				3A3A0F2B27F5A8130097622D /* Product.swift */,
 				3AF6E93C27FEEAE700760311 /* ReviewRequest.swift */,
 				3AF6E93E27FEEB1500760311 /* ReviewResult.swift */,
 				3AF6E94227FEECAF00760311 /* CommonResult.swift */,
 				3AF6E94627FF069200760311 /* CartRequest.swift */,
 				3AF6E94827FF06FE00760311 /* CartResponse.swift */,
 				3AB64538280C60D20047EDB9 /* CatalogResponse.swift */,
+				3A4A3131281FE2D20007DF4E /* ProductResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -565,6 +576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A4A3132281FE2D20007DF4E /* ProductResponse.swift in Sources */,
 				3AFF713A27F0741400C5399B /* ChangeUserData.swift in Sources */,
 				3AFF712927F0665400C5399B /* RequestFactory.swift in Sources */,
 				3AB64539280C60D20047EDB9 /* CatalogResponse.swift in Sources */,
@@ -572,11 +584,11 @@
 				3AF6E94327FEECAF00760311 /* CommonResult.swift in Sources */,
 				3AFF713627F0731F00C5399B /* ChangeUserDataResult.swift in Sources */,
 				3AFF713127F06EAC00C5399B /* SignupRequestFactory.swift in Sources */,
-				3A3A0F2C27F5A8130097622D /* Product.swift in Sources */,
 				3A3A0F3627F5AD600097622D /* GetProduct.swift in Sources */,
 				3AFF711327F05A3500C5399B /* AbstractErrorParser.swift in Sources */,
 				3AEF4E9B280C89E000DB55CD /* ImageLoaderExtension.swift in Sources */,
 				3AF6E94D27FF07B700760311 /* CartReqests.swift in Sources */,
+				3A4A3130281FDAE10007DF4E /* CakeItemViewController.swift in Sources */,
 				3AFF712D27F06D3400C5399B /* LogoutResult.swift in Sources */,
 				3AFF711A27F05D3200C5399B /* DataRequest.swift in Sources */,
 				3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */,

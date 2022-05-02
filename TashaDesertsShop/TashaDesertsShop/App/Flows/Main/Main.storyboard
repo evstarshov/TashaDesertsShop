@@ -413,6 +413,87 @@
             </objects>
             <point key="canvasLocation" x="2797" y="868"/>
         </scene>
+        <!--Cake Item View Controller-->
+        <scene sceneID="or4-gL-pMS">
+            <objects>
+                <viewController id="AwL-m7-dM6" customClass="CakeItemViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dgm-Yl-eW3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cVi-Lu-1vh">
+                                <rect key="frame" x="5" y="730" width="404" height="132"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-he-yxl">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNQ-So-Fh7">
+                                        <rect key="frame" x="0.0" y="36.5" width="404" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osq-lI-JtA">
+                                        <rect key="frame" x="0.0" y="67" width="404" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bC-7D-OuK">
+                                        <rect key="frame" x="0.0" y="101" width="404" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Добавить в корзину"/>
+                                        <connections>
+                                            <action selector="addtoCartButtonTapped" destination="AwL-m7-dM6" eventType="touchUpInside" id="oZo-VV-6Fr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-XA-GCc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="cSt-8z-ApJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="egH-0I-b4s"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUh-Ow-1Gl" customClass="RoundImageView" customModule="TashaDesertsShop" customModuleProvider="target">
+                                <rect key="frame" x="25" y="106" width="364" height="608"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gAP-H2-sG9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cVi-Lu-1vh" firstAttribute="bottom" secondItem="gAP-H2-sG9" secondAttribute="bottom" id="4kb-8W-Xtq"/>
+                            <constraint firstItem="bUh-Ow-1Gl" firstAttribute="leading" secondItem="gAP-H2-sG9" secondAttribute="leading" constant="25" id="Gsm-RS-zOr"/>
+                            <constraint firstItem="ycg-XA-GCc" firstAttribute="leading" secondItem="Dgm-Yl-eW3" secondAttribute="leading" id="M9d-bh-4Q3"/>
+                            <constraint firstItem="bUh-Ow-1Gl" firstAttribute="centerX" secondItem="Dgm-Yl-eW3" secondAttribute="centerX" id="Mg8-8a-gMt"/>
+                            <constraint firstItem="ycg-XA-GCc" firstAttribute="top" secondItem="gAP-H2-sG9" secondAttribute="top" id="NsO-qA-VYz"/>
+                            <constraint firstItem="cVi-Lu-1vh" firstAttribute="top" secondItem="bUh-Ow-1Gl" secondAttribute="bottom" constant="16" id="WiV-ow-yEU"/>
+                            <constraint firstItem="gAP-H2-sG9" firstAttribute="trailing" secondItem="cVi-Lu-1vh" secondAttribute="trailing" constant="5" id="Xfy-Bf-yJQ"/>
+                            <constraint firstItem="cVi-Lu-1vh" firstAttribute="leading" secondItem="gAP-H2-sG9" secondAttribute="leading" constant="5" id="iFR-cg-wPC"/>
+                            <constraint firstItem="bUh-Ow-1Gl" firstAttribute="top" secondItem="ycg-XA-GCc" secondAttribute="bottom" constant="18" id="pLS-r6-GfC"/>
+                            <constraint firstItem="ycg-XA-GCc" firstAttribute="centerX" secondItem="bUh-Ow-1Gl" secondAttribute="centerX" id="qcm-YK-NVn"/>
+                            <constraint firstItem="gAP-H2-sG9" firstAttribute="trailing" secondItem="bUh-Ow-1Gl" secondAttribute="trailing" constant="25" id="rLU-Lr-qdb"/>
+                            <constraint firstItem="cVi-Lu-1vh" firstAttribute="centerX" secondItem="Dgm-Yl-eW3" secondAttribute="centerX" id="wdS-yI-EUh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="1bC-7D-OuK" id="Dhk-6m-4Cv"/>
+                        <outlet property="backButton" destination="egH-0I-b4s" id="OYX-xL-u27"/>
+                        <outlet property="descriptionLabel" destination="oNQ-So-Fh7" id="N20-lQ-XhE"/>
+                        <outlet property="itemImageView" destination="bUh-Ow-1Gl" id="3S2-j7-RGk"/>
+                        <outlet property="nameLabel" destination="CLa-he-yxl" id="7lw-6Y-3Ph"/>
+                        <outlet property="priceLabel" destination="osq-lI-JtA" id="0JA-G8-X9J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zz3-eJ-bCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500.0000000000005" y="867.85714285714278"/>
+        </scene>
         <!--Change Data View Controller-->
         <scene sceneID="Dr2-f1-eX9">
             <objects>
