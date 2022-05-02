@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dnd-uA-AcQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tasha Deserts Shop View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TashaDesertsShopViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TashaDeserts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfU-Of-Nf1">
+                                <rect key="frame" x="155" y="437.5" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XfU-Of-Nf1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Vlk-q9-vPT"/>
+                            <constraint firstItem="XfU-Of-Nf1" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="l7X-KM-SVa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="wGE-KK-Azc">
+            <objects>
+                <viewController storyboardIdentifier="AuthController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dnd-uA-AcQ" customClass="AuthViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaK-10-e0P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TashaIconSmall" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-4w-cu5">
+                                <rect key="frame" x="87" y="44" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в магазин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-1Q-rE5">
+                                <rect key="frame" x="141" y="180" width="132.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F06-f1-4Fc">
+                                <rect key="frame" x="30" y="275.5" width="354" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pap-bh-Xjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jQP-0a-L32">
+                                        <rect key="frame" x="0.0" y="42" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTk-tY-5sW">
+                                <rect key="frame" x="133" y="378" width="148" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Войти"/>
+                                <connections>
+                                    <action selector="loginButtonTapped" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="329-Oe-yht"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-Rf-e5r">
+                                <rect key="frame" x="25" y="831" width="364" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="PFY-E0-fLm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rRd-eA-ci1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="bottom" secondItem="zSB-4w-cu5" secondAttribute="bottom" constant="690" id="0Bw-Qd-TgH"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="top" secondItem="rRd-eA-ci1" secondAttribute="top" id="8Gm-yV-N2J"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="133" id="K00-IO-YaN"/>
+                            <constraint firstItem="wMU-1Q-rE5" firstAttribute="top" secondItem="zSB-4w-cu5" secondAttribute="bottom" constant="8" symbolic="YES" id="LSW-U8-uia"/>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="trailing" secondItem="F06-f1-4Fc" secondAttribute="trailing" constant="30" id="Tbt-nR-aHc"/>
+                            <constraint firstItem="wMU-1Q-rE5" firstAttribute="centerX" secondItem="zSB-4w-cu5" secondAttribute="centerX" id="VSi-Bo-Ag9"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="centerX" secondItem="F06-f1-4Fc" secondAttribute="centerX" id="Ws9-Kp-phg"/>
+                            <constraint firstItem="PTk-tY-5sW" firstAttribute="top" secondItem="jQP-0a-L32" secondAttribute="bottom" constant="26.5" id="b4J-gt-62a"/>
+                            <constraint firstItem="VcE-Rf-e5r" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="25" id="i70-e3-JF4"/>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="trailing" secondItem="VcE-Rf-e5r" secondAttribute="trailing" constant="25" id="q2I-qP-QeF"/>
+                            <constraint firstItem="F06-f1-4Fc" firstAttribute="top" secondItem="wMU-1Q-rE5" secondAttribute="bottom" constant="75" id="u0x-7y-56P"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="87" id="v5S-IX-ULr"/>
+                            <constraint firstItem="zSB-4w-cu5" firstAttribute="centerX" secondItem="zaK-10-e0P" secondAttribute="centerX" id="wNb-5C-a2T"/>
+                            <constraint firstItem="F06-f1-4Fc" firstAttribute="leading" secondItem="rRd-eA-ci1" secondAttribute="leading" constant="30" id="x8m-rt-z1m"/>
+                            <constraint firstItem="rRd-eA-ci1" firstAttribute="bottom" secondItem="VcE-Rf-e5r" secondAttribute="bottom" id="xOP-hA-IM3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authButton" destination="PTk-tY-5sW" id="1bA-WJ-sS5"/>
+                        <outlet property="loginField" destination="Pap-bh-Xjb" id="8OC-sl-DRh"/>
+                        <outlet property="passwordField" destination="jQP-0a-L32" id="gsj-xN-QoY"/>
+                        <outlet property="signInButton" destination="VcE-Rf-e5r" id="eeJ-AX-DKr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waa-gp-wG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="137.94642857142856"/>
+        </scene>
+        <!--Main Screen View Controller-->
+        <scene sceneID="5Vf-2B-rVd">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1hn-dd-JRe" customClass="MainScreenViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xb9-XV-31o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TashaIconLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-r9-pmZ">
+                                <rect key="frame" x="87" y="141" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sR-LT-gOC">
+                                <rect key="frame" x="15" y="277" width="384" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B3N-Ws-PU6">
+                                <rect key="frame" x="50" y="622.5" width="314" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-nX-uRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Изменить свои данные"/>
+                                        <connections>
+                                            <action selector="changeDataButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="E2O-sR-RBK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIW-ER-Bjv">
+                                        <rect key="frame" x="0.0" y="39" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Выйти"/>
+                                        <connections>
+                                            <action selector="exitButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="oV5-zZ-jMW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jld-W1-OiH">
+                                <rect key="frame" x="60" y="344" width="294" height="208.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="TashaIconSmall" imagePlacement="top" subtitle="Торты"/>
+                                <connections>
+                                    <action selector="goToCatalogButtonTapped" destination="1hn-dd-JRe" eventType="touchUpInside" id="gy9-NU-N3d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Vi-00-I4U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7sR-LT-gOC" firstAttribute="top" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="8" symbolic="YES" id="9P2-2N-5a2"/>
+                            <constraint firstItem="3Vi-00-I4U" firstAttribute="trailing" secondItem="7sR-LT-gOC" secondAttribute="trailing" constant="15" id="F7M-Sr-JkC"/>
+                            <constraint firstItem="7sR-LT-gOC" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="15" id="FUe-0S-nJ8"/>
+                            <constraint firstItem="jld-W1-OiH" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="HX5-nj-X1p"/>
+                            <constraint firstItem="jld-W1-OiH" firstAttribute="centerY" secondItem="Xb9-XV-31o" secondAttribute="centerY" id="ISh-ir-ISm"/>
+                            <constraint firstItem="3Vi-00-I4U" firstAttribute="bottom" secondItem="2MJ-r9-pmZ" secondAttribute="bottom" constant="593" id="Ivc-uV-Pp6"/>
+                            <constraint firstItem="2MJ-r9-pmZ" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="87" id="NdM-Uc-XJh"/>
+                            <constraint firstItem="2MJ-r9-pmZ" firstAttribute="top" secondItem="3Vi-00-I4U" secondAttribute="top" constant="97" id="OhC-yb-QJu"/>
+                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="top" secondItem="jld-W1-OiH" secondAttribute="bottom" constant="70" id="X5F-It-ili"/>
+                            <constraint firstItem="2MJ-r9-pmZ" firstAttribute="centerX" secondItem="Xb9-XV-31o" secondAttribute="centerX" id="be2-mZ-cT9"/>
+                            <constraint firstItem="B3N-Ws-PU6" firstAttribute="leading" secondItem="3Vi-00-I4U" secondAttribute="leading" constant="50" id="jq9-fQ-3oi"/>
+                            <constraint firstItem="3Vi-00-I4U" firstAttribute="trailing" secondItem="B3N-Ws-PU6" secondAttribute="trailing" constant="50" id="lup-CR-vmd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeDataButton" destination="RMh-nX-uRz" id="zoP-ED-4xx"/>
+                        <outlet property="exitButton" destination="aIW-ER-Bjv" id="iar-25-eEV"/>
+                        <outlet property="goToCatalogButton" destination="jld-W1-OiH" id="bro-df-qFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whP-MC-UVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1979.7101449275365" y="137.94642857142856"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="knV-gE-lD2">
+            <objects>
+                <viewController storyboardIdentifier="SignupVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tOP-oK-Q7Y" customClass="SignUpViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggq-n9-DKT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzP-kY-UpY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="817.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z23-aO-Odb">
+                                        <rect key="frame" x="143" y="8" width="130" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-br-Nf5">
+                                        <rect key="frame" x="20" y="43" width="374" height="283"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dke-of-Xbw">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Фамилию" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cH-ou-qcA">
+                                                <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Адрес электронной почты" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-QD-GHv">
+                                                <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tWn-90-OBh">
+                                                <rect key="frame" x="0.0" y="126" width="374" height="32"/>
+                                                <segments>
+                                                    <segment title="М"/>
+                                                    <segment title="Ж"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EL4-a6-gQR">
+                                                <rect key="frame" x="0.0" y="165" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpx-bS-p1c">
+                                                <rect key="frame" x="0.0" y="207" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="О себе" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egm-3d-iZh">
+                                                <rect key="frame" x="0.0" y="249" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-RW-WGa">
+                                        <rect key="frame" x="126" y="334" width="164" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG7-Hw-nIN">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться"/>
+                                                <connections>
+                                                    <action selector="signupButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="xwH-gl-taV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-jl-2tl">
+                                                <rect key="frame" x="0.0" y="39" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Очистить форму"/>
+                                                <connections>
+                                                    <action selector="cleanFormButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="lOh-db-Ua0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GW6-Z3-3lt">
+                                                <rect key="frame" x="0.0" y="78" width="164" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Вернуться"/>
+                                                <connections>
+                                                    <action selector="cleanFormButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="ALD-yg-l8y"/>
+                                                    <action selector="goBackButtonTapped" destination="tOP-oK-Q7Y" eventType="touchUpInside" id="P42-fv-b8s"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hZJ-br-Nf5" firstAttribute="top" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="8.5" id="83l-VO-3XT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="783" id="8gi-8Z-QSw"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="top" secondItem="ZzP-kY-UpY" secondAttribute="topMargin" id="Ewd-jE-fq7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z23-aO-Odb" secondAttribute="trailing" constant="141" id="KDO-1e-VBs"/>
+                                    <constraint firstItem="kln-tq-s8E" firstAttribute="trailing" secondItem="hZJ-br-Nf5" secondAttribute="trailing" constant="20" id="Lfm-oy-6XJ"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="centerX" secondItem="ZzP-kY-UpY" secondAttribute="centerX" constant="1" id="TFf-7z-Ep2"/>
+                                    <constraint firstItem="B8c-RW-WGa" firstAttribute="top" secondItem="hZJ-br-Nf5" secondAttribute="bottom" constant="8" symbolic="YES" id="dQP-3o-1dq"/>
+                                    <constraint firstItem="B8c-RW-WGa" firstAttribute="centerX" secondItem="Z23-aO-Odb" secondAttribute="centerX" id="ien-pM-QEa"/>
+                                    <constraint firstItem="Z23-aO-Odb" firstAttribute="leading" secondItem="kln-tq-s8E" secondAttribute="leading" constant="143" id="kkt-Uw-t1F"/>
+                                    <constraint firstItem="kln-tq-s8E" firstAttribute="bottom" secondItem="Z23-aO-Odb" secondAttribute="bottom" constant="783" id="tqa-3R-G32"/>
+                                    <constraint firstItem="hZJ-br-Nf5" firstAttribute="leading" secondItem="kln-tq-s8E" secondAttribute="leading" constant="20" id="uDo-VE-StK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qUd-Oc-w4a"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kln-tq-s8E"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e9n-K4-oXs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="top" secondItem="e9n-K4-oXs" secondAttribute="top" id="IwY-lW-iZx"/>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="centerX" secondItem="ggq-n9-DKT" secondAttribute="centerX" id="Lj8-fG-OzQ"/>
+                            <constraint firstItem="ZzP-kY-UpY" firstAttribute="leading" secondItem="e9n-K4-oXs" secondAttribute="leading" id="jxa-2U-Wk1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioField" destination="Egm-3d-iZh" id="8NZ-OE-piV"/>
+                        <outlet property="clearFormButton" destination="dAm-jl-2tl" id="pxt-rh-4GZ"/>
+                        <outlet property="emailField" destination="L5n-QD-GHv" id="5Lr-My-B7W"/>
+                        <outlet property="genderControl" destination="tWn-90-OBh" id="ibr-L6-4ZO"/>
+                        <outlet property="goBackButton" destination="GW6-Z3-3lt" id="6at-v9-3zH"/>
+                        <outlet property="lastnameField" destination="3cH-ou-qcA" id="p9N-HB-ol1"/>
+                        <outlet property="loginField" destination="EL4-a6-gQR" id="O6B-jc-MQs"/>
+                        <outlet property="nameField" destination="Dke-of-Xbw" id="oaY-ti-2Pu"/>
+                        <outlet property="passwordField" destination="Zpx-bS-p1c" id="oBB-uC-ZMQ"/>
+                        <outlet property="scrollView" destination="ZzP-kY-UpY" id="Vns-Tw-v7V"/>
+                        <outlet property="signupButton" destination="mG7-Hw-nIN" id="j9e-1y-Psz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQO-zO-JRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.7246376811595" y="862.5"/>
+        </scene>
+        <!--Success Sign View Controller-->
+        <scene sceneID="va5-y4-VNw">
+            <objects>
+                <viewController storyboardIdentifier="SuccessSignVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VOV-VC-7R1" customClass="SuccessSignViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LZG-Co-DWT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TashaIconLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ov2-dA-SJe">
+                                <rect key="frame" x="87" y="121" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спасибо за регистрацию!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q04-iB-SSj">
+                                <rect key="frame" x="87" y="257" width="260" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMV-pt-Uh4">
+                                <rect key="frame" x="180.5" y="432.5" width="53" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ура!"/>
+                                <connections>
+                                    <action selector="okButtonTapped" destination="VOV-VC-7R1" eventType="touchUpInside" id="4W6-PH-Ybm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aoV-K6-486"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aoV-K6-486" firstAttribute="bottom" secondItem="ov2-dA-SJe" secondAttribute="bottom" constant="613" id="5VE-1q-Zpl"/>
+                            <constraint firstItem="Q04-iB-SSj" firstAttribute="top" secondItem="ov2-dA-SJe" secondAttribute="bottom" constant="8" symbolic="YES" id="GgC-vU-p6n"/>
+                            <constraint firstItem="wMV-pt-Uh4" firstAttribute="centerY" secondItem="LZG-Co-DWT" secondAttribute="centerY" id="OAh-Rm-iz3"/>
+                            <constraint firstItem="wMV-pt-Uh4" firstAttribute="centerX" secondItem="LZG-Co-DWT" secondAttribute="centerX" id="Rxn-WC-7BJ"/>
+                            <constraint firstItem="ov2-dA-SJe" firstAttribute="centerX" secondItem="LZG-Co-DWT" secondAttribute="centerX" id="g1G-MU-jfc"/>
+                            <constraint firstItem="ov2-dA-SJe" firstAttribute="leading" secondItem="aoV-K6-486" secondAttribute="leading" constant="87" id="i69-kb-zMn"/>
+                            <constraint firstItem="Q04-iB-SSj" firstAttribute="leading" secondItem="ov2-dA-SJe" secondAttribute="leading" id="sux-Fh-QFt"/>
+                            <constraint firstItem="ov2-dA-SJe" firstAttribute="top" secondItem="aoV-K6-486" secondAttribute="top" constant="77" id="vLu-pO-SQr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="okButton" destination="wMV-pt-Uh4" id="Xfw-xk-7h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G01-LR-XtQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="863"/>
+        </scene>
+        <!--Cakes Table View Controller-->
+        <scene sceneID="ngZ-b7-Y36">
+            <objects>
+                <tableViewController storyboardIdentifier="cakesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FnE-va-rYS" customClass="CakesTableViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SVA-oq-jRG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="ijh-N6-YoG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Торты" id="yZt-tv-Zbk">
+                                    <barButtonItem key="leftBarButtonItem" title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="oe7-Qf-c4u">
+                                        <connections>
+                                            <action selector="backButtonTapped" destination="FnE-va-rYS" id="0hD-c8-j3T"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cakesCell" id="M6D-pK-LO8">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M6D-pK-LO8" id="bRp-Bt-Fgd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FnE-va-rYS" id="QzI-4r-FvZ"/>
+                            <outlet property="delegate" destination="FnE-va-rYS" id="QRe-i6-2eA"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="backButton" destination="oe7-Qf-c4u" id="1Po-tM-9GX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-bY-DGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797" y="868"/>
+        </scene>
+        <!--Change Data View Controller-->
+        <scene sceneID="Dr2-f1-eX9">
+            <objects>
+                <viewController storyboardIdentifier="ChangeDataVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UMh-y1-FTX" customClass="ChangeDataViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KEP-4t-nzj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Изменить свои данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r38-bR-bbP">
+                                <rect key="frame" x="114.5" y="44" width="185.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yEP-Nm-0f8">
+                                <rect key="frame" x="40" y="109" width="334" height="283"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-s3-721">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-8e-ytF">
+                                        <rect key="frame" x="0.0" y="42" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-W7-fu6">
+                                        <rect key="frame" x="0.0" y="84" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-fX-HfR">
+                                        <rect key="frame" x="0.0" y="126" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Электронная почта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-DA-WaS">
+                                        <rect key="frame" x="0.0" y="168" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DTF-d8-ZIm">
+                                        <rect key="frame" x="0.0" y="210" width="334" height="32"/>
+                                        <segments>
+                                            <segment title="М"/>
+                                            <segment title="Ж"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-er-j39">
+                                        <rect key="frame" x="0.0" y="249" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jNg-jq-a2O">
+                                <rect key="frame" x="50" y="400" width="314" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0v2-7D-ieW">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped" destination="UMh-y1-FTX" eventType="touchUpInside" id="RXE-l6-nLe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-Ua-wcI">
+                                        <rect key="frame" x="0.0" y="39" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Отменить"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped" destination="UMh-y1-FTX" eventType="touchUpInside" id="ed1-EE-I6r"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tDS-LJ-BiC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yEP-Nm-0f8" firstAttribute="leading" secondItem="tDS-LJ-BiC" secondAttribute="leading" constant="40" id="0pU-D8-MGO"/>
+                            <constraint firstItem="tDS-LJ-BiC" firstAttribute="trailing" secondItem="yEP-Nm-0f8" secondAttribute="trailing" constant="40" id="Axl-sQ-EGa"/>
+                            <constraint firstItem="r38-bR-bbP" firstAttribute="centerX" secondItem="KEP-4t-nzj" secondAttribute="centerX" id="Dch-2k-7XE"/>
+                            <constraint firstItem="yEP-Nm-0f8" firstAttribute="top" secondItem="r38-bR-bbP" secondAttribute="bottom" constant="44.5" id="cM9-P3-1dS"/>
+                            <constraint firstItem="tDS-LJ-BiC" firstAttribute="trailing" secondItem="jNg-jq-a2O" secondAttribute="trailing" constant="50" id="eKi-0G-XLQ"/>
+                            <constraint firstItem="jNg-jq-a2O" firstAttribute="top" secondItem="yEP-Nm-0f8" secondAttribute="bottom" constant="8" symbolic="YES" id="h6U-tn-jds"/>
+                            <constraint firstItem="r38-bR-bbP" firstAttribute="top" secondItem="tDS-LJ-BiC" secondAttribute="top" id="xvu-Pb-i1F"/>
+                            <constraint firstItem="jNg-jq-a2O" firstAttribute="leading" secondItem="tDS-LJ-BiC" secondAttribute="leading" constant="50" id="zbi-Wx-wfs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioTextField" destination="LG1-er-j39" id="cLc-w4-1tX"/>
+                        <outlet property="cancelButton" destination="SuX-Ua-wcI" id="BfL-Re-Qzi"/>
+                        <outlet property="emailTextField" destination="4UD-DA-WaS" id="wCu-jc-I8L"/>
+                        <outlet property="genderControl" destination="DTF-d8-ZIm" id="qmd-RL-m0l"/>
+                        <outlet property="lastNameTextField" destination="D4b-fX-HfR" id="fmB-Zy-JuX"/>
+                        <outlet property="loginTextField" destination="fA5-s3-721" id="MZ8-tS-kx0"/>
+                        <outlet property="nameTextField" destination="KDO-W7-fu6" id="vmR-uC-jjJ"/>
+                        <outlet property="passwordTextField" destination="Jaq-8e-ytF" id="QkA-HK-Koo"/>
+                        <outlet property="saveButton" destination="0v2-7D-ieW" id="zxl-fT-aD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkV-Sx-ycG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2766.666666666667" y="137.94642857142856"/>
+        </scene>
+        <!--Success Data Change View Controller-->
+        <scene sceneID="jpZ-bk-z5L">
+            <objects>
+                <viewController storyboardIdentifier="EditDataSuccessVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mmj-pA-IfN" customClass="SuccessDataChangeViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JHB-4w-rKr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TashaIconLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kjc-m4-3Ja">
+                                <rect key="frame" x="87" y="119" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные успешно изменены" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skH-lT-19p">
+                                <rect key="frame" x="68" y="255" width="278" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjn-BG-Uv0">
+                                <rect key="frame" x="83" y="432.5" width="248" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться на экран авторизации"/>
+                                <connections>
+                                    <action selector="goToAuthButtonTapped" destination="Mmj-pA-IfN" eventType="touchUpInside" id="F3s-6G-5nT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dpm-ZE-i98"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dpm-ZE-i98" firstAttribute="bottom" secondItem="skH-lT-19p" secondAttribute="bottom" constant="580" id="09M-X4-WZh"/>
+                            <constraint firstItem="kjc-m4-3Ja" firstAttribute="leading" secondItem="dpm-ZE-i98" secondAttribute="leading" constant="87" id="4d9-92-kHc"/>
+                            <constraint firstItem="skH-lT-19p" firstAttribute="centerX" secondItem="kjc-m4-3Ja" secondAttribute="centerX" id="7fT-L5-QG7"/>
+                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="centerY" secondItem="JHB-4w-rKr" secondAttribute="centerY" id="7mj-DH-X17"/>
+                            <constraint firstItem="skH-lT-19p" firstAttribute="top" secondItem="kjc-m4-3Ja" secondAttribute="bottom" constant="8" symbolic="YES" id="Rq6-AZ-SB2"/>
+                            <constraint firstItem="kjc-m4-3Ja" firstAttribute="top" secondItem="dpm-ZE-i98" secondAttribute="top" constant="75" id="aEN-2W-Gvn"/>
+                            <constraint firstItem="Hjn-BG-Uv0" firstAttribute="centerX" secondItem="JHB-4w-rKr" secondAttribute="centerX" id="fvI-QJ-W98"/>
+                            <constraint firstItem="dpm-ZE-i98" firstAttribute="bottom" secondItem="kjc-m4-3Ja" secondAttribute="bottom" constant="615" id="j5I-9R-Out"/>
+                            <constraint firstItem="kjc-m4-3Ja" firstAttribute="centerX" secondItem="JHB-4w-rKr" secondAttribute="centerX" id="oMq-Nd-tKd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBackButton" destination="Hjn-BG-Uv0" id="62J-UT-4gk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fR-Hu-KFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3500" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TashaIconLarge" width="551" height="251"/>
+        <image name="TashaIconSmall" width="270" height="180"/>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
