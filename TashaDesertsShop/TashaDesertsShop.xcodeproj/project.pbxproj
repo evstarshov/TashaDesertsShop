@@ -18,6 +18,7 @@
 		3A4A312D281EE6F20007DF4E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A312C281EE6F20007DF4E /* RoundImageView.swift */; };
 		3A4A3130281FDAE10007DF4E /* CakeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A312F281FDAE10007DF4E /* CakeItemViewController.swift */; };
 		3A4A3132281FE2D20007DF4E /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A3131281FE2D20007DF4E /* ProductResponse.swift */; };
+		3A4A3135281FE5160007DF4E /* ProductIDkeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A3134281FE5160007DF4E /* ProductIDkeeper.swift */; };
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
 		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
 		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
@@ -95,6 +96,7 @@
 		3A4A312C281EE6F20007DF4E /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		3A4A312F281FDAE10007DF4E /* CakeItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemViewController.swift; sourceTree = "<group>"; };
 		3A4A3131281FE2D20007DF4E /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		3A4A3134281FE5160007DF4E /* ProductIDkeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIDkeeper.swift; sourceTree = "<group>"; };
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3A4A3133281FE4E40007DF4E /* Singltons */ = {
+			isa = PBXGroup;
+			children = (
+				3A4A3134281FE5160007DF4E /* ProductIDkeeper.swift */,
+			);
+			path = Singltons;
+			sourceTree = "<group>";
+		};
 		3AB6452C280C484C0047EDB9 /* AuthController */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +348,7 @@
 		3ADFBCEC27E9C46100BBB8A3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3A4A3133281FE4E40007DF4E /* Singltons */,
 				3A4A312B281EE6D10007DF4E /* UIcomponents */,
 				3AEF4E99280C89BF00DB55CD /* Extensions */,
 				3AFF711127F05A0E00C5399B /* Network */,
@@ -618,6 +629,7 @@
 				3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */,
 				3AFF711C27F05DB200C5399B /* AbstractReqestFactory.swift in Sources */,
 				3A3A0F3327F5AC710097622D /* GetProductRequestFactory.swift in Sources */,
+				3A4A3135281FE5160007DF4E /* ProductIDkeeper.swift in Sources */,
 				3A3A0F3127F5AA6B0097622D /* GetCatalog.swift in Sources */,
 				3AFF711827F05AAA00C5399B /* ErrorParser.swift in Sources */,
 				3AF6E94727FF069200760311 /* CartRequest.swift in Sources */,
