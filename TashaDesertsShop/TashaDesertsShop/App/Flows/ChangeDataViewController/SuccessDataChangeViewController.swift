@@ -19,8 +19,6 @@ class SuccessDataChangeViewController: UIViewController {
     //MARK: IBAction methods
     
     @IBAction func goToAuthButtonTapped() {
-        let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
-        authVC.modalPresentationStyle = .fullScreen
-        self.present(authVC, animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

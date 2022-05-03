@@ -9,33 +9,38 @@ import UIKit
 
 class MainScreenViewController: UIViewController {
     
+    //MARK: IBOutlets:
+    
     @IBOutlet weak var changeDataButton: UIButton!
     @IBOutlet weak var goToCatalogButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
+    //MARK: Lifecycle methods:
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     // MARK: IBAction methods:
     
     @IBAction func changeDataButtonTapped() {
         let editVC = self.storyboard?.instantiateViewController(withIdentifier: "ChangeDataVC") as! ChangeDataViewController
-        editVC.modalPresentationStyle = .fullScreen
-        self.present(editVC, animated: true)
+        self.navigationController?.present(editVC, animated: true)
     }
     
     @IBAction func exitButtonTapped() {
         let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
-        authVC.modalPresentationStyle = .fullScreen
-        self.present(authVC, animated: true)
+        self.navigationController?.pushViewController(authVC, animated: true)
     }
     
     @IBAction func goToCatalogButtonTapped() {
         let cakesTVC = self.storyboard?.instantiateViewController(withIdentifier: "cakesVC") as! CakesTableViewController
-        cakesTVC.modalPresentationStyle = .fullScreen
-        self.present(cakesTVC, animated: true)
+        self.navigationController?.pushViewController(cakesTVC, animated: true)
     }
 
 }

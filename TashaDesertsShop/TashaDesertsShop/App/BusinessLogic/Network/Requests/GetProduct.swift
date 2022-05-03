@@ -25,7 +25,7 @@ class GetProduct: AbstractRequestFactory {
 }
 
 extension GetProduct: GetProductRequestFactory {
-    func getProduct(productId: Int, completionHandler: @escaping (AFDataResponse<Product>) -> Void) {
+    func getProduct(productId: Int, completionHandler: @escaping (AFDataResponse<ProductResponse>) -> Void) {
         let requestModel = GetProduct(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     } 
@@ -39,7 +39,7 @@ extension GetProduct {
         let productId: Int
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "productId": productId
             ]
         }
     }

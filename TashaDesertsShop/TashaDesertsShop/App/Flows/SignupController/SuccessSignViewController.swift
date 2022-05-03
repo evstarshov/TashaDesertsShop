@@ -13,11 +13,10 @@ class SuccessSignViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func okButtonTapped() {
-        let authVC = self.storyboard?.instantiateViewController(withIdentifier: "AuthController") as! AuthViewController
-        authVC.modalPresentationStyle = .fullScreen
-        self.present(authVC, animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
