@@ -16,10 +16,10 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var productImage: RoundImageView!
     @IBOutlet weak var deteteItemButton: UIButton!
     
-    // MARK: Private properties:
+    // MARK: Public properties:
     
-    private var delegate: CartDelegate?
-    private var row: Int?
+    public var delegate: CartDelegate?
+    public var row: Int?
     
     // MARK: Lifecycle methods
     
@@ -34,8 +34,8 @@ class CartTableViewCell: UITableViewCell {
     // MARK: IBActions
     
     @IBAction func deleteItemButtonTapped() {
-        print("deleting item from cart")
         guard let row = row else { return }
+        print("deleting item from cart at row \(row)")
         delegate?.deleteItem(row)
     }
     

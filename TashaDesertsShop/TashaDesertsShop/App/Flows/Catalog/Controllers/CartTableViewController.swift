@@ -21,13 +21,11 @@ class CartTableViewController: UITableViewController {
     // MARK: Private properties:
     
     private let factory = RequestFactory()
-    private var cartItems = [CartItems]()
     
     // MARK: Lifecycle methods:
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cartItems = CartKeeper.shared.cartItems
         setTableview()
     }
     
@@ -41,8 +39,8 @@ class CartTableViewController: UITableViewController {
         if CartKeeper.shared.cartItems.count == 0 {
             return 1
         } else {
-            cartContentLabel.text = "Выбрано товаров \(cartItems.count) на сумму \(cartItems.map { $0.price! }.reduce(0, +).formattedString)"
-            return cartItems.count
+            cartContentLabel.text = "Выбрано товаров \(CartKeeper.shared.cartItems.count) на сумму \(CartKeeper.shared.cartItems.map { $0.price! }.reduce(0, +).formattedString)"
+            return CartKeeper.shared.cartItems.count
         }
     }
     
@@ -54,11 +52,13 @@ class CartTableViewController: UITableViewController {
             self.tableView.tableFooterView = nil
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
-            let item = self.cartItems[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as? CartTableViewCell
+            let item = CartKeeper.shared.cartItems[indexPath.row]
             let cellModel = CartCellModelFactory.cartCellModel(from: item)
-            cell.configure(from: cellModel)
-            return cell
+            cell?.configure(from: cellModel)
+            cell?.delegate = self
+            cell?.row = indexPath.row
+            return cell ?? UITableViewCell()
         }
     }
     
@@ -84,13 +84,13 @@ class CartTableViewController: UITableViewController {
 
 extension CartTableViewController: CartDelegate {
     func deleteItem(_ index: Int) {
-        guard let itemName = cartItems[index].productName else { return }
+        guard let itemName = CartKeeper.shared.cartItems[index].productName else { return }
         let cartFactory = factory.makeCartRequestFactory()
         let request = CartRequest(productId: index)
         let alert = UIAlertController(title: "Корзина", message: "Вы действительно хотите удалить \(itemName) из корзины?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { _ in
-            self.cartItems.remove(at: index)
+            CartKeeper.shared.cartItems.remove(at: index)
             self.tableView.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Нет", style: .default, handler: nil))
