@@ -492,10 +492,41 @@
         <scene sceneID="3gJ-Y2-qDQ">
             <objects>
                 <tableViewController storyboardIdentifier="cartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rnL-2y-JdM" customClass="CartTableViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GZ3-zw-Mfq">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="50" estimatedSectionFooterHeight="-1" id="GZ3-zw-Mfq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleAspectFit" id="foH-hZ-eia">
+                            <rect key="frame" x="0.0" y="154" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Wzl-tE-x8R">
+                                    <rect key="frame" x="5" y="5" width="404" height="34"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cartContentLabel" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrL-gJ-nK6">
+                                            <rect key="frame" x="0.0" y="0.0" width="199.5" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39C-rj-BD5">
+                                            <rect key="frame" x="204.5" y="0.0" width="199.5" height="34"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Оформить"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Wzl-tE-x8R" firstAttribute="centerY" secondItem="foH-hZ-eia" secondAttribute="centerY" id="ELq-iE-51a"/>
+                                <constraint firstAttribute="bottom" secondItem="Wzl-tE-x8R" secondAttribute="bottom" constant="5" id="e93-qB-h3h"/>
+                                <constraint firstItem="Wzl-tE-x8R" firstAttribute="leading" secondItem="foH-hZ-eia" secondAttribute="leading" constant="5" id="nT3-eJ-3o9"/>
+                                <constraint firstItem="Wzl-tE-x8R" firstAttribute="centerX" secondItem="foH-hZ-eia" secondAttribute="centerX" id="ob2-9P-kuf"/>
+                                <constraint firstAttribute="trailing" secondItem="Wzl-tE-x8R" secondAttribute="trailing" constant="5" id="p9x-lB-SQL"/>
+                                <constraint firstItem="Wzl-tE-x8R" firstAttribute="top" secondItem="foH-hZ-eia" secondAttribute="top" constant="5" id="sI1-MI-EMY"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" id="hFV-ah-MSC">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -520,6 +551,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="K7V-fD-2ct"/>
+                    <connections>
+                        <outlet property="buyButton" destination="39C-rj-BD5" id="eae-gy-4ue"/>
+                        <outlet property="cartContentLabel" destination="lrL-gJ-nK6" id="z2g-Dd-Seo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9H-NT-Oc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

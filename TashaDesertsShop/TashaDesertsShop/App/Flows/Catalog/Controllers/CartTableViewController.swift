@@ -9,6 +9,11 @@ import UIKit
 
 class CartTableViewController: UITableViewController {
     
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var cartContentLabel: UILabel!
+    @IBOutlet weak var buyButton: UIButton!
+    
     // MARK: Private properties:
     
     private var cartItems = [CartItems]()
@@ -23,14 +28,15 @@ class CartTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //
-    //    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if CartKeeper.shared.cartItems.count == 0 {
             return 1
         } else {
+            cartContentLabel.text = "Выбрано товаров \(cartItems.count) на сумму \(cartItems.map { $0.price! }.reduce(0, +).formattedString)"
             return cartItems.count
         }
     }
@@ -63,7 +69,7 @@ class CartTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.reloadData()
     }
-    
+
     private func setNavigationBar() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
