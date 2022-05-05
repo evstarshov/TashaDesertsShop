@@ -18,7 +18,7 @@ class CakeTableViewCell: UITableViewCell {
     
     // MARK: Cell Configure
     
-    func configure(with cellModel: CatalogResponseModel) {
+    public func configure(with cellModel: CatalogResponseModel) {
         self.nameLabel?.text = cellModel.productName ?? "Name error"
         self.descriptionLabel?.text = cellModel.shortDescription ?? "Descroption error"
         self.priceLabel?.text = String(cellModel.price ?? 0)

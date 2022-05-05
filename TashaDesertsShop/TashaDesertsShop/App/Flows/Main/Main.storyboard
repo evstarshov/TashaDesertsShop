@@ -474,11 +474,41 @@
                         <outlet property="itemStackView" destination="cVi-Lu-1vh" id="te3-zD-4J1"/>
                         <outlet property="nameLabel" destination="CLa-he-yxl" id="7lw-6Y-3Ph"/>
                         <outlet property="priceLabel" destination="osq-lI-JtA" id="0JA-G8-X9J"/>
+                        <segue destination="rnL-2y-JdM" kind="show" id="qbv-5r-OOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zz3-eJ-bCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3672" y="138"/>
+        </scene>
+        <!--Cart Table View Controller-->
+        <scene sceneID="3gJ-Y2-qDQ">
+            <objects>
+                <tableViewController storyboardIdentifier="cartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rnL-2y-JdM" customClass="CartTableViewController" customModule="TashaDesertsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GZ3-zw-Mfq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" id="8UB-PE-zLh">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8UB-PE-zLh" id="UBP-Cj-dZz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rnL-2y-JdM" id="IgC-0j-mTA"/>
+                            <outlet property="delegate" destination="rnL-2y-JdM" id="Rya-1b-nmQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="K7V-fD-2ct"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9H-NT-Oc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4532" y="138"/>
         </scene>
         <!--Change Data View Controller-->
         <scene sceneID="Dr2-f1-eX9">
