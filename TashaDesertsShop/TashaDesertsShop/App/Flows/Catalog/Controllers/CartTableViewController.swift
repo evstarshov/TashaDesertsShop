@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CartDelegate {
+    func deleteItem(_ index: Int)
+}
+
 class CartTableViewController: UITableViewController {
     
     // MARK: IBOutlets
@@ -16,6 +20,7 @@ class CartTableViewController: UITableViewController {
     
     // MARK: Private properties:
     
+    private let factory = RequestFactory()
     private var cartItems = [CartItems]()
     
     // MARK: Lifecycle methods:
@@ -72,5 +77,32 @@ class CartTableViewController: UITableViewController {
 
     private func setNavigationBar() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+}
+
+    // MARK: CartTableViewController delegate extension:
+
+extension CartTableViewController: CartDelegate {
+    func deleteItem(_ index: Int) {
+        guard let itemName = cartItems[index].productName else { return }
+        let cartFactory = factory.makeCartRequestFactory()
+        let request = CartRequest(productId: index)
+        let alert = UIAlertController(title: "Корзина", message: "Вы действительно хотите удалить \(itemName) из корзины?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { _ in
+            self.cartItems.remove(at: index)
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Нет", style: .default, handler: nil))
+        
+        cartFactory.deleteFromCart(cart: request) { response in
+            switch response.result {
+            case .success:
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: nil)
+                }
+            case .failure(let error): print(error.localizedDescription)
+            }
+        }
     }
 }

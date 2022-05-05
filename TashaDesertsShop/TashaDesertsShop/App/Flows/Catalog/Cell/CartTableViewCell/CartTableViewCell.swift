@@ -14,6 +14,14 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var productImage: RoundImageView!
+    @IBOutlet weak var deteteItemButton: UIButton!
+    
+    // MARK: Private properties:
+    
+    private var delegate: CartDelegate?
+    private var row: Int?
+    
+    // MARK: Lifecycle methods
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +29,14 @@ class CartTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    // MARK: IBActions
+    
+    @IBAction func deleteItemButtonTapped() {
+        print("deleting item from cart")
+        guard let row = row else { return }
+        delegate?.deleteItem(row)
     }
     
     // MARK: Cell configure method

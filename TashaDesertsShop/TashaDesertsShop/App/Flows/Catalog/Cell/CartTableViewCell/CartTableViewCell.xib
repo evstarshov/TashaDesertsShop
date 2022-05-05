@@ -24,20 +24,31 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fa4-Ew-3QG">
-                        <rect key="frame" x="120" y="37.5" width="738.5" height="20.5"/>
+                        <rect key="frame" x="120" y="32" width="738.5" height="31"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kog-cG-bIR">
-                                <rect key="frame" x="0.0" y="0.0" width="684.5" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="629.5" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab9-fe-VDl">
-                                <rect key="frame" x="699.5" y="0.0" width="39" height="20.5"/>
+                                <rect key="frame" x="644.5" y="0.0" width="39" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osq-Wi-FIH">
+                                <rect key="frame" x="698.5" y="0.0" width="40" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ke6-Sx-pLD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash.square.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteItemButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9dZ-wS-0u1"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </stackView>
                 </subviews>
@@ -53,6 +64,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="deteteItemButton" destination="osq-Wi-FIH" id="usA-I3-HbT"/>
                 <outlet property="priceLabel" destination="Ab9-fe-VDl" id="ZHP-XU-Pue"/>
                 <outlet property="productImage" destination="hX9-RE-vv6" id="SLj-XC-LNp"/>
                 <outlet property="productNameLabel" destination="kog-cG-bIR" id="WBS-Y4-gid"/>
@@ -60,4 +72,7 @@
             <point key="canvasLocation" x="306.52173913043481" y="71.316964285714278"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="trash.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
