@@ -23,6 +23,8 @@
 		3A674ABC2823C06200BE4B89 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A674ABA2823C06200BE4B89 /* CartTableViewCell.swift */; };
 		3A674ABD2823C06200BE4B89 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A674ABB2823C06200BE4B89 /* CartTableViewCell.xib */; };
 		3A674AC12823C19700BE4B89 /* CartCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A674AC02823C19700BE4B89 /* CartCellFactory.swift */; };
+		3A674AC32823D1B700BE4B89 /* CartKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A674AC22823D1B700BE4B89 /* CartKeeper.swift */; };
+		3A674AC52823D26200BE4B89 /* CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A674AC42823D26200BE4B89 /* CartItems.swift */; };
 		3A83CD7B2809B217008C9C44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7A2809B217008C9C44 /* AuthViewController.swift */; };
 		3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */; };
 		3A83CD7F2809C30F008C9C44 /* SuccessSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */; };
@@ -105,6 +107,8 @@
 		3A674ABA2823C06200BE4B89 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		3A674ABB2823C06200BE4B89 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		3A674AC02823C19700BE4B89 /* CartCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCellFactory.swift; sourceTree = "<group>"; };
+		3A674AC22823D1B700BE4B89 /* CartKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartKeeper.swift; sourceTree = "<group>"; };
+		3A674AC42823D26200BE4B89 /* CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItems.swift; sourceTree = "<group>"; };
 		3A83CD7A2809B217008C9C44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		3A83CD7C2809BBAA008C9C44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3A83CD7E2809C30F008C9C44 /* SuccessSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessSignViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4A3134281FE5160007DF4E /* ProductIDkeeper.swift */,
+				3A674AC22823D1B700BE4B89 /* CartKeeper.swift */,
 			);
 			path = Singltons;
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 				3AF6E94827FF06FE00760311 /* CartResponse.swift */,
 				3AB64538280C60D20047EDB9 /* CatalogResponse.swift */,
 				3A4A3131281FE2D20007DF4E /* ProductResponse.swift */,
+				3A674AC42823D26200BE4B89 /* CartItems.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 				3AF6E93F27FEEB1500760311 /* ReviewResult.swift in Sources */,
 				3A674ABC2823C06200BE4B89 /* CartTableViewCell.swift in Sources */,
 				3A83CD812809C844008C9C44 /* MainScreenViewController.swift in Sources */,
+				3A674AC52823D26200BE4B89 /* CartItems.swift in Sources */,
 				3A3A0F2E27F5A9910097622D /* GetCatalogRequestFactory.swift in Sources */,
 				3A83CD832809CD97008C9C44 /* ChangeDataViewController.swift in Sources */,
 				3AFF712527F0617500C5399B /* AuthRequestFactory.swift in Sources */,
@@ -665,6 +672,7 @@
 				3A3A0F3127F5AA6B0097622D /* GetCatalog.swift in Sources */,
 				3AFF711827F05AAA00C5399B /* ErrorParser.swift in Sources */,
 				3AF6E94727FF069200760311 /* CartRequest.swift in Sources */,
+				3A674AC32823D1B700BE4B89 /* CartKeeper.swift in Sources */,
 				3A83CD7D2809BBAA008C9C44 /* SignUpViewController.swift in Sources */,
 				3AB64532280C4B910047EDB9 /* CakesTableViewController.swift in Sources */,
 			);

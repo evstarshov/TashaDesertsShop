@@ -25,6 +25,8 @@ class CartTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: Cell configure method
+    
     public func configure(from model: CartCellModel) {
         self.productNameLabel.text = model.productName
         self.priceLabel.text = String(model.price ?? 0)
