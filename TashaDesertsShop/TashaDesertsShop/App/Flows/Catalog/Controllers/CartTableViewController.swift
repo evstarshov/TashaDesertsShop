@@ -14,42 +14,47 @@ class CartTableViewController: UITableViewController {
     private var cartItems = [CartItems]()
     
     // MARK: Lifecycle methods:
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cartItems = CartKeeper.shared.cartItems
         setTableview()
     }
-
+    
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//
-//    }
-
+    
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //
+    //    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartItems.count
+        if CartKeeper.shared.cartItems.count == 0 {
+            return 1
+        } else {
+            return cartItems.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if CartKeeper.shared.cartItems.count == 0 {
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "emptyCell", for: indexPath)
             cell.textLabel?.text = "Корзина пуста"
+            cell.textLabel?.textAlignment = .center
             self.tableView.tableFooterView = nil
             return cell
         } else {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
-        let item = self.cartItems[indexPath.row]
-        let cellModel = CartCellModelFactory.cartCellModel(from: item)
-        cell.configure(from: cellModel)
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
+            let item = self.cartItems[indexPath.row]
+            let cellModel = CartCellModelFactory.cartCellModel(from: item)
+            cell.configure(from: cellModel)
+            return cell
         }
     }
     
     // MARK: Private methods:
     
     private func setTableview() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cartCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "emptyCell")
         tableView.register(
             UINib(
                 nibName: "CartTableViewCell",
