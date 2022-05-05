@@ -466,10 +466,17 @@
                             <constraint firstItem="75U-kM-vlh" firstAttribute="leading" secondItem="Dgm-Yl-eW3" secondAttribute="leadingMargin" constant="-35" id="yzn-9c-9lh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vdV-vc-C4b"/>
+                    <navigationItem key="navigationItem" id="vdV-vc-C4b">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="lhs-Po-FxC">
+                            <connections>
+                                <action selector="goToCartButtonTapped" destination="AwL-m7-dM6" id="JbL-TP-R2m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addToCartButton" destination="1bC-7D-OuK" id="Dhk-6m-4Cv"/>
                         <outlet property="descriptionLabel" destination="oNQ-So-Fh7" id="N20-lQ-XhE"/>
+                        <outlet property="goToCartButton" destination="lhs-Po-FxC" id="SN8-Ud-Lz6"/>
                         <outlet property="itemImageView" destination="bUh-Ow-1Gl" id="3S2-j7-RGk"/>
                         <outlet property="itemStackView" destination="cVi-Lu-1vh" id="te3-zD-4J1"/>
                         <outlet property="nameLabel" destination="CLa-he-yxl" id="7lw-6Y-3Ph"/>
@@ -672,6 +679,7 @@
     <resources>
         <image name="TashaIconLarge" width="551" height="251"/>
         <image name="TashaIconSmall" width="270" height="180"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

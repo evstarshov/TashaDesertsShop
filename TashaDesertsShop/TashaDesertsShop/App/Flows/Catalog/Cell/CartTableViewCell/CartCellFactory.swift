@@ -22,7 +22,7 @@ struct CartCellModelImpl: CartCellModel {
 }
 
 final class CartCellModelFactory {
-    static func cartCellModel(from model: CartCellModelImpl) -> CartCellModelImpl {
+    static func cartCellModel(from model: CartItems) -> CartCellModelImpl {
         return CartCellModelImpl(productId: model.productId, productName: model.productName, price: model.price, picUrl: model.picUrl)
     }
 }

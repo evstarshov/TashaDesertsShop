@@ -9,27 +9,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="CartTableViewCell" customModule="TashaDesertsShop" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="556" height="116"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="CartTableViewCell" customModule="TashaDesertsShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="887" height="103"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="556" height="116"/>
+                <rect key="frame" x="0.0" y="0.0" width="887" height="103"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab9-fe-VDl">
-                        <rect key="frame" x="482" y="5" width="69" height="106"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VhJ-ua-rNZ">
-                        <rect key="frame" x="8" y="8" width="230.5" height="100"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-RE-vv6" customClass="RoundImageView" customModule="TashaDesertsShop" customModuleProvider="target">
+                        <rect key="frame" x="20" y="10" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="14k-8G-rzr"/>
+                            <constraint firstAttribute="width" constant="75" id="9cL-vN-qYf"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Fa4-Ew-3QG">
+                        <rect key="frame" x="120" y="37.5" width="738.5" height="20.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hX9-RE-vv6" customClass="RoundImageView" customModule="TashaDesertsShop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="113" height="100"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kog-cG-bIR">
-                                <rect key="frame" x="121" y="40" width="109.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kog-cG-bIR">
+                                <rect key="frame" x="0.0" y="0.0" width="667.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab9-fe-VDl">
+                                <rect key="frame" x="699.5" y="0.0" width="39" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -38,24 +42,22 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="VhJ-ua-rNZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3Da-gh-cdt"/>
-                    <constraint firstAttribute="bottom" secondItem="Ab9-fe-VDl" secondAttribute="bottom" constant="5" id="3x4-Mj-IKY"/>
-                    <constraint firstItem="Ab9-fe-VDl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="4Ft-UW-nDd"/>
-                    <constraint firstItem="VhJ-ua-rNZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="5ub-vz-m7D"/>
-                    <constraint firstItem="Ab9-fe-VDl" firstAttribute="leading" secondItem="VhJ-ua-rNZ" secondAttribute="trailing" constant="243.5" id="W2c-yf-vV8"/>
-                    <constraint firstItem="Ab9-fe-VDl" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gFE-RI-4ol"/>
-                    <constraint firstAttribute="bottom" secondItem="VhJ-ua-rNZ" secondAttribute="bottom" constant="8" id="qaF-Wp-rFY"/>
-                    <constraint firstItem="VhJ-ua-rNZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="vOp-IJ-Orr"/>
-                    <constraint firstAttribute="trailing" secondItem="Ab9-fe-VDl" secondAttribute="trailing" constant="5" id="vSs-OJ-FCW"/>
+                    <constraint firstItem="hX9-RE-vv6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="51b-NL-JtK"/>
+                    <constraint firstAttribute="bottom" secondItem="hX9-RE-vv6" secondAttribute="bottom" constant="10" id="791-ZO-Xeu"/>
+                    <constraint firstItem="hX9-RE-vv6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="d33-Cl-hGa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fa4-Ew-3QG" secondAttribute="trailing" constant="8.5" id="gaB-sD-asV"/>
+                    <constraint firstItem="Fa4-Ew-3QG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="m8d-Or-RUs"/>
+                    <constraint firstItem="Fa4-Ew-3QG" firstAttribute="leading" secondItem="hX9-RE-vv6" secondAttribute="trailing" constant="25" id="nex-IX-adb"/>
+                    <constraint firstItem="hX9-RE-vv6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pp7-nn-yvP"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="priceLabel" destination="Ab9-fe-VDl" id="ZHP-XU-Pue"/>
                 <outlet property="productImage" destination="hX9-RE-vv6" id="SLj-XC-LNp"/>
-                <outlet property="sds" destination="kog-cG-bIR" id="Deu-Wi-1Rz"/>
+                <outlet property="productNameLabel" destination="kog-cG-bIR" id="WBS-Y4-gid"/>
             </connections>
-            <point key="canvasLocation" x="302.89855072463769" y="105.80357142857143"/>
+            <point key="canvasLocation" x="306.52173913043481" y="71.316964285714278"/>
         </tableViewCell>
     </objects>
 </document>

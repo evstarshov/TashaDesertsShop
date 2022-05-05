@@ -16,7 +16,7 @@ class CakeItemViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
-    @IBOutlet weak var backButtonItem: UIButton!
+    @IBOutlet weak var goToCartButton: UIBarButtonItem!
     @IBOutlet weak var itemStackView: UIStackView!
    
     
@@ -45,13 +45,17 @@ class CakeItemViewController: UIViewController {
     // MARK: IBAction methods:
     
     @IBAction func addtoCartButtonTapped() {
-        print("Added to cart")
+        guard self.addToCartButton.isEnabled == true else { return }
+        CartKeeper.shared.cartItems.append(CartItems(productId: ProductIdKeeper.productId, productName: ProductIdKeeper.productName, price: ProductIdKeeper.price, picUrl: ProductIdKeeper.picUrl))
+        self.addToCartButton.isEnabled = false
+        self.addToCartButton.backgroundColor = .gray
+        print("Added to cart \(ProductIdKeeper.productName ?? "Error")")
     }
     
-    @IBAction func backButtonTapped() {
-        let cakeVC = self.storyboard?.instantiateViewController(withIdentifier: "cakesVC") as! CakesTableViewController
-        cakeVC.modalPresentationStyle = .fullScreen
-        self.present(cakeVC, animated: true)
+    @IBAction func goToCartButtonTapped() {
+        let cartVC = self.storyboard?.instantiateViewController(withIdentifier: "cartVC") as! CartTableViewController
+        cartVC.navigationController?.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(cartVC, animated: true)
     }
     
     // MARK: Private methods:

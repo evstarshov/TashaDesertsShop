@@ -40,7 +40,13 @@ class CakesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let productId = catalog[indexPath.row].productId
+        let productName = catalog[indexPath.row].productName
+        let price = catalog[indexPath.row].price
+        let picture = catalog[indexPath.row].picUrl
         ProductIdKeeper.productId = productId ?? 0
+        ProductIdKeeper.productName = productName ?? "Error"
+        ProductIdKeeper.price = price ?? 0
+        ProductIdKeeper.picUrl = picture ?? "Error" 
         let itemVC = self.storyboard?.instantiateViewController(withIdentifier: "itemVC") as! CakeItemViewController
         self.navigationController?.pushViewController(itemVC, animated: true)
     }
