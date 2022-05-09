@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class CakesTableViewController: UITableViewController {
     
@@ -31,7 +32,10 @@ class CakesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cakesCell", for: indexPath) as! CakeTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cakesCell", for: indexPath) as? CakeTableViewCell else {
+            Crashlytics.crashlytics().log("Catalog Table View Cell is Nil!")
+            return UITableViewCell()
+        }
         let item = self.catalog[indexPath.row]
         let cellModel = CakesCellFactory.cellModel(from: item)
         cell.configure(with: cellModel)

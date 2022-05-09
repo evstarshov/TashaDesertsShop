@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class CakeItemViewController: UIViewController {
     
@@ -32,12 +33,16 @@ class CakeItemViewController: UIViewController {
         super.viewDidLoad()
         productId = ProductIdKeeper.productId
         configureVC()
+        GoogleAnalyticsLogger.logEvent(name: "catalog_view", key: "result", value: "success")
     }
     
     // MARK: IBAction methods:
     
     @IBAction func addtoCartButtonTapped() {
-        guard let product = product else { return }
+        guard let product = product else {
+            Crashlytics.crashlytics().log("Error. Product is nil!")
+            return
+        }
         print("Added to cart \(ProductIdKeeper.productName ?? "Error")")
         let cartFactory = factory.makeCartRequestFactory()
         let request = CartRequest(productId: product.productId, quantity: 1)
@@ -82,6 +87,7 @@ class CakeItemViewController: UIViewController {
                 self.nameLabel.text = product.productName
                 self.descriptionLabel.text = product.description
                 self.priceLabel.text = String(product.price ?? 0)
+                GoogleAnalyticsLogger.logEvent(name: "Item View", key: "item", value: self.product?.productName ?? "unknown")
                 if let imageUrl = URL(string: product.picUrl ?? "https://www.pngjoy.com/pngm/309/5828658_trailer-hd-omg-404-not-found-transparent-png.png") {
                     self.itemImageView.loadImage(url: imageUrl)
                 }

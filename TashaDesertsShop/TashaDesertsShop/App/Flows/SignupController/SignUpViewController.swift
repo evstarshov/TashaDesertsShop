@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class SignUpViewController: UIViewController {
     
@@ -69,6 +70,7 @@ class SignUpViewController: UIViewController {
     // MARK: Private methods:
     
     private func showSuccessScreen() {
+        GoogleAnalyticsLogger.logEvent(name: "SignUp", key: "change_data", value: "success")
         let successVC = self.storyboard?.instantiateViewController(withIdentifier: "SuccessSignVC") as! SuccessSignViewController
         successVC.modalPresentationStyle = .fullScreen
         self.present(successVC, animated: true, completion: nil)
@@ -86,12 +88,14 @@ class SignUpViewController: UIViewController {
     }
     
     private func showError(_ errorMessage: String) {
+        GoogleAnalyticsLogger.logEvent(name: "SignUp", key: "signup", value: "Failture. Server error")
         let alert = UIAlertController(title: "Ошибка сервера", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     private func showEditError() {
+        GoogleAnalyticsLogger.logEvent(name: "SignUp", key: "change_data", value: "fillment error")
         let alert = UIAlertController(title: "Вы не заполнили поля", message: "Нужно заполнить все поля", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
