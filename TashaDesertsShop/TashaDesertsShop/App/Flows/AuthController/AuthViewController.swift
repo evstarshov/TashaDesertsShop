@@ -33,7 +33,13 @@ class AuthViewController: UIViewController {
         factory.login(user: user) { response in
             DispatchQueue.main.async {
                 switch response.result {
-                case .success(let success): success.result == 1 ? self.proceedToMainScreen() : self.showError(success.errorMessage ?? "Неизвестная ошибка.")
+                case .success(let success):
+                    if success.result == 1 {
+                        UserKeeper.shared.userLogin = user
+                        self.proceedToMainScreen()
+                    } else {
+                        self.showError(success.errorMessage ?? "Неизвестная ошибка.")
+                    }
                 case .failure(let error): self.showError(error.localizedDescription)
                 }
             }

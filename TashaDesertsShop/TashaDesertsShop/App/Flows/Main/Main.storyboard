@@ -519,6 +519,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="filled" title="Оформить"/>
+                                            <connections>
+                                                <action selector="buyButtonTapped" destination="rnL-2y-JdM" eventType="touchUpInside" id="TEj-Kt-IUg"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>

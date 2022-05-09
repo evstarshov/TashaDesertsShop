@@ -62,6 +62,28 @@ class CartTableViewController: UITableViewController {
         }
     }
     
+    // MARK: IBAction methods:
+    
+    @IBAction func buyButtonTapped() {
+        print("Payment begin")
+        let factory = factory.makeCartRequestFactory()
+        let user = UserKeeper.shared.userLogin
+        let alert = UIAlertController(title: "Корзина", message: "Спасибо за покупку!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        factory.payCart(user: user ?? User(id: 123)) { response in
+            switch response.result {
+            case .success:
+                DispatchQueue.main.async {
+                    self.present(alert, animated: true, completion: {
+                        CartKeeper.shared.cartItems = []
+                        self.tableView.reloadData()
+                    })
+                }
+            case .failure(let error): print(error.localizedDescription)
+            }
+        }
+    }
+    
     // MARK: Private methods:
     
     private func setTableview() {
@@ -74,13 +96,13 @@ class CartTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.reloadData()
     }
-
+    
     private func setNavigationBar() {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
-    // MARK: CartTableViewController delegate extension:
+// MARK: CartTableViewController delegate extension:
 
 extension CartTableViewController: CartDelegate {
     func deleteItem(_ index: Int) {
