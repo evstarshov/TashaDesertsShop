@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='TashaDesertsShopUITests.xctest' tests='26' failures='4'>
+  <testsuite name='TashaDesertsShopTests.CartCellTestCase' tests='2' failures='0'>
+    <testcase classname='TashaDesertsShopTests.CartCellTestCase' name='testExample' time='0.007'/>
+    <testcase classname='TashaDesertsShopTests.CartCellTestCase' name='testPerformanceExample' time='0.420'/>
+  </testsuite>
+  <testsuite name='TashaDesertsShopTests.RequestsTests' tests='13' failures='0'>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformAddReviewsRequest' time='8.042'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformAddToCartRequest' time='0.538'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformAuthRequest' time='0.533'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformChangeUserDataRequest' time='0.540'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformDeleteFromCartRequest' time='0.534'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformGetCartRequest' time='0.556'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformGetCatalogRequest' time='0.538'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformGetProductRequest' time='0.555'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformGetReviewsRequest' time='0.537'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformLogoutRequest' time='0.536'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformPayCartRequest' time='0.524'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformRemoveReviewsRequest' time='0.531'/>
+    <testcase classname='TashaDesertsShopTests.RequestsTests' name='testShouldPerformSignupRequest' time='0.524'/>
+  </testsuite>
+  <testsuite name='TashaDesertsShopTests.ResponseCodableTests' tests='1' failures='0'>
+    <testcase classname='TashaDesertsShopTests.ResponseCodableTests' name='testShouldDownloadAndParse' time='0.464'/>
+  </testsuite>
+  <testsuite name='TashaDesertsShopTests.TashaDesertsShopTests' tests='2' failures='0'>
+    <testcase classname='TashaDesertsShopTests.TashaDesertsShopTests' name='testExample' time='0.001'/>
+    <testcase classname='TashaDesertsShopTests.TashaDesertsShopTests' name='testPerformanceExample' time='0.256'/>
+  </testsuite>
+  <testsuite name='TashaDesertsShopUITests.TashaDesertsShopUITests' tests='4' failures='0'>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITests' name='testExample' time='3.086'/>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITests' name='testFailedLogin' time='8.029'/>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITests' name='testLaunchPerformance' time='86.402'/>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITests' name='testSuccessfulLogin' time='4.466'/>
+  </testsuite>
+  <testsuite name='TashaDesertsShopUITests.TashaDesertsShopUITestsLaunchTests' tests='4' failures='4'>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITestsLaunchTests' name='testLaunch'>
+      <failure message='*** -[__NSCFString stringByAppendingPathExtension:]: nil argument (NSInvalidArgumentException)'>TashaDesertsShopUITests/TashaDesertsShopUITestsLaunchTests.swift:27</failure>
+    </testcase>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITestsLaunchTests' name='testLaunch'>
+      <failure message='*** -[__NSCFString stringByAppendingPathExtension:]: nil argument (NSInvalidArgumentException)'>TashaDesertsShopUITests/TashaDesertsShopUITestsLaunchTests.swift:27</failure>
+    </testcase>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITestsLaunchTests' name='testLaunch'>
+      <failure message='*** -[__NSCFString stringByAppendingPathExtension:]: nil argument (NSInvalidArgumentException)'>TashaDesertsShopUITests/TashaDesertsShopUITestsLaunchTests.swift:27</failure>
+    </testcase>
+    <testcase classname='TashaDesertsShopUITests.TashaDesertsShopUITestsLaunchTests' name='testLaunch'>
+      <failure message='*** -[__NSCFString stringByAppendingPathExtension:]: nil argument (NSInvalidArgumentException)'>TashaDesertsShopUITests/TashaDesertsShopUITestsLaunchTests.swift:27</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
