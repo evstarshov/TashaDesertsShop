@@ -16,7 +16,7 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
+  desc "run tests with git check"
     lane :tests_lane do
 
     # checkout release branch
@@ -27,6 +27,15 @@ platform :ios do
 
     # run tests
     run_tests
+  
+  end
 
+  desc "Fastlane Scan"
+    lane :scans do
+	scan(
+	workspace: "TashaDesertsShop.xcworkspace",
+	devices: ["iPhone 12"]
+	)
   end
 end
+

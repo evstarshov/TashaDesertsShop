@@ -21,7 +21,15 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios tests_lane
 ```
 
-Description of what the lane does
+run tests with git check
+
+### ios scans
+
+```sh
+[bundle exec] fastlane ios scans
+```
+
+Fastlane Scan
 
 ----
 
