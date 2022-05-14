@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class AuthViewController: UIViewController {
     
@@ -51,9 +52,16 @@ class AuthViewController: UIViewController {
         self.navigationController?.present(singupVC, animated: true)
     }
     
+    @IBAction func crashButtonTapped(_ sender: AnyObject) {
+        print("test crash")
+        let numbers = [0]
+        let _ = numbers[1]
+    }
+    
     // MARK: Navigation
     
     private func proceedToMainScreen() {
+        GoogleAnalyticsLogger.logEvent(name: "login", key: "result", value: "success")
         let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainVC") as! MainScreenViewController
         self.navigationController?.pushViewController(mainVC, animated: true)
     }
@@ -61,6 +69,7 @@ class AuthViewController: UIViewController {
     // MARK: Alerts
     
     private func showError(_ errorMessage: String) {
+        GoogleAnalyticsLogger.logEvent(name: "login", key: "result", value: "failture")
         let alert = UIAlertController(title: "Ошибка авторизации", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок(", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)

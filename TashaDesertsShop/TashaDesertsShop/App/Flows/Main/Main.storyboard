@@ -72,6 +72,15 @@
                                     <action selector="signUpButtonTapped" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="PFY-E0-fLm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me2-Ze-VVW">
+                                <rect key="frame" x="161" y="407" width="93" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test Crash"/>
+                                <connections>
+                                    <action selector="crashButtonTapped:" destination="Dnd-uA-AcQ" eventType="touchUpInside" id="erQ-XO-Kms"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rRd-eA-ci1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 protocol CartDelegate {
     func deleteItem(_ index: Int)
@@ -27,6 +28,7 @@ class CartTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableview()
+        GoogleAnalyticsLogger.logEvent(name: "view_cart", key: "result", value: "success")
     }
     
     // MARK: - Table view data source
@@ -106,11 +108,15 @@ class CartTableViewController: UITableViewController {
 
 extension CartTableViewController: CartDelegate {
     func deleteItem(_ index: Int) {
-        guard let itemName = CartKeeper.shared.cartItems[index].productName else { return }
+        guard let itemName = CartKeeper.shared.cartItems[index].productName else {
+            Crashlytics.crashlytics().log("itemName is nil!")
+            return
+        }
         let cartFactory = factory.makeCartRequestFactory()
         let request = CartRequest(productId: index)
         let alert = UIAlertController(title: "Корзина", message: "Вы действительно хотите удалить \(itemName) из корзины?", preferredStyle: .alert)
-        
+        alert.view.accessibilityIdentifier = "cart_alert"
+        alert.view.accessibilityValue = "Do you want to remove the item from cart?"
         alert.addAction(UIAlertAction(title: "Да", style: .destructive, handler: { _ in
             CartKeeper.shared.cartItems.remove(at: index)
             self.tableView.reloadData()

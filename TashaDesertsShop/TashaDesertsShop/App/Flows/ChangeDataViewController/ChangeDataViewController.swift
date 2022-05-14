@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class ChangeDataViewController: UIViewController {
     
@@ -70,6 +71,7 @@ class ChangeDataViewController: UIViewController {
     
     private func showSuccessScreen() {
         print("opening suscess vc")
+        GoogleAnalyticsLogger.logEvent(name: "Data change", key: "change_data", value: "success")
         let editSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "EditDataSuccessVC") as! SuccessDataChangeViewController
         self.navigationController?.modalPresentationStyle = .fullScreen
         self.present(editSuccessVC, animated: true)
@@ -78,12 +80,14 @@ class ChangeDataViewController: UIViewController {
     // MARK: Alerts
     
     private func showError(_ errorMessage: String) {
+        GoogleAnalyticsLogger.logEvent(name: "Data change", key: "change_data", value: "Failture. Server error")
         let alert = UIAlertController(title: "Ошибка сервера", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     private func showFillError() {
+        GoogleAnalyticsLogger.logEvent(name: "Data change", key: "change_data", value: "fillment error")
         let alert = UIAlertController(title: "Ошибка", message: "Пожалуйста заполните все поля", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
