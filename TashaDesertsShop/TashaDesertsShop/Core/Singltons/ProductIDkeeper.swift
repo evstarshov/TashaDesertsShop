@@ -9,5 +9,8 @@ import Foundation
 
 final class ProductIdKeeper {
     static var productId: Int?
+    static var productName: String?
+    static var price: Int?
+    static var picUrl: String?
     private init(){}
 }
